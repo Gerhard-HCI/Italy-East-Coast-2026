@@ -736,9 +736,9 @@ function renderUtilities() {
       <h2 class="util-title">Currency</h2>
       <div class="util-sub">EUR ↔ GBP ↔ JPY</div>
       <div class="fx-rate-row"><span>Rates: <strong>£${FX_GBP_PER_EUR}</strong> / <strong>¥${FX_JPY_PER_EUR}</strong> per €1</span></div>
-      <div class="fx-row"><label for="fx-eur">EUR</label><input id="fx-eur" type="number" inputmode="decimal" placeholder="100" oninput="convertFX('eur')"></div>
-      <div class="fx-row"><label for="fx-gbp">GBP</label><input id="fx-gbp" type="number" inputmode="decimal" placeholder="—" oninput="convertFX('gbp')"></div>
-      <div class="fx-row"><label for="fx-jpy">JPY</label><input id="fx-jpy" type="number" inputmode="decimal" placeholder="—" oninput="convertFX('jpy')"></div>
+      <div class="fx-row"><label for="fx-eur">EUR</label><input id="fx-eur" type="text" inputmode="decimal" placeholder="100" oninput="convertFX('eur')"></div>
+      <div class="fx-row"><label for="fx-gbp">GBP</label><input id="fx-gbp" type="text" inputmode="decimal" placeholder="—" oninput="convertFX('gbp')"></div>
+      <div class="fx-row"><label for="fx-jpy">JPY</label><input id="fx-jpy" type="text" inputmode="decimal" placeholder="—" oninput="convertFX('jpy')"></div>
     </div>
 
     <div class="util-card">
