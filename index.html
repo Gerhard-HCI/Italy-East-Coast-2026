@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -596,8 +595,8 @@ function copyText(text) {
   }
 }
 
-function mapsLink(q) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); }
-function navLink(q)  { return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q) + '&travelmode=driving'; }
+function mapsLink(q) { return 'https://maps.apple.com/?q=' + encodeURIComponent(q); }
+function navLink(q)  { return 'https://maps.apple.com/?daddr=' + encodeURIComponent(q) + '&dirflg=d'; }
 
 /* ─── Clock ─────────────────────────────────────────────────────────── */
 function updateClock() {
