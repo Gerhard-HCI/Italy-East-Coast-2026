@@ -182,7 +182,7 @@ a{color:var(--wine);text-decoration:none;}
       <div class="brand-mark">🇮🇹</div>
       <div class="brand-text">
         <div class="brand-title">Italy East Coast 2026</div>
-        <div class="brand-sub">Happy Camper · 17 Aug – 3 Sep</div>
+        <div class="brand-sub">Happy Camper · 17 Aug – 2 Sep</div>
       </div>
     </div>
     <div class="clock-block">
@@ -219,7 +219,7 @@ const TRIP = {
   contact:    '+81 80 6989 2107',
   email:      'hello@happycamper.food',
   startDate:  '2026-08-17',
-  endDate:    '2026-09-03',
+  endDate:    '2026-09-02',
   travelers:  2,
 
   hotels: [
@@ -234,14 +234,14 @@ const TRIP = {
     { name: 'Tra Cielo e Mare',                location: 'Vieste, FG',                 nights: 'Thu 28 Aug',             ref: 'Confirmed',            url: 'https://tracieloemarevieste.com',   phone: '+393508286423', mapsQuery: 'Tra Cielo e Mare Vieste' },
     { name: 'Aquatio Cave Luxury Hotel & Spa', location: 'Matera',                     nights: 'Fri 29 Aug',             ref: '9093288937874',        url: 'https://aquatiohotel.com',         phone: '+44 20 3027 6614', mapsQuery: 'Aquatio Cave Luxury Hotel Matera' },
     { name: 'Sextantio Le Grotte della Civita',location: 'Matera',                     nights: 'Sat 30 Aug',             ref: '9093289030888',        url: 'https://sextantio.it',             phone: '+390835332744', mapsQuery: 'Sextantio Le Grotte della Civita Matera' },
-    { name: 'Palazzo Gattini Luxury Hotel',    location: 'Matera',                     nights: 'Sun 31 Aug – Wed 3 Sep', ref: '12889RKCGB0000000290', url: 'https://vretreats.com/palazzo-gattini', phone: '+390835334358', mapsQuery: 'Palazzo Gattini Matera' },
+    { name: 'Palazzo Gattini Luxury Hotel',    location: 'Matera',                     nights: 'Sun 31 Aug – Wed 2 Sep', ref: '12889RKCGB0000000290', url: 'https://vretreats.com/palazzo-gattini', phone: '+390835334358', mapsQuery: 'Palazzo Gattini Matera' },
   ],
 
   days: [
 
     /* ─── PROLOGUE 1 · Sun 17 Aug ─── Salzburg → Bressanone */
     {
-      date: '2026-08-17', dayNum: 'P1', weekday: 'Sunday 17 August',
+      date: '2026-08-17', dayNum: 'P1', weekday: 'Monday 17 August',
       city: 'Salzburg → Bressanone',
       hotel: 'Hotel Elephant',
       hotelMapsQuery: 'Hotel Elephant Bressanone',
@@ -257,7 +257,7 @@ const TRIP = {
 
     /* ─── PROLOGUE 2 · Mon 18 Aug ─── Bressanone → Verona */
     {
-      date: '2026-08-18', dayNum: 'P2', weekday: 'Monday 18 August',
+      date: '2026-08-18', dayNum: 'P2', weekday: 'Tuesday 18 August',
       city: 'Bressanone → Verona',
       hotel: 'Palazzo Ciopeta',
       hotelMapsQuery: 'Palazzo Ciopeta Verona',
@@ -273,7 +273,7 @@ const TRIP = {
 
     /* ─── PROLOGUE 3 · Tue 19 Aug ─── Verona · Viva Vivaldi */
     {
-      date: '2026-08-19', dayNum: 'P3', weekday: 'Tuesday 19 August',
+      date: '2026-08-19', dayNum: 'P3', weekday: 'Wednesday 19 August',
       city: 'Verona — Arena di Verona',
       hotel: 'Palazzo Ciopeta',
       hotelMapsQuery: 'Palazzo Ciopeta Verona',
@@ -287,7 +287,7 @@ const TRIP = {
 
     /* ─── PROLOGUE 4 · Wed 20 Aug ─── Verona · Nabucco */
     {
-      date: '2026-08-20', dayNum: 'P4', weekday: 'Wednesday 20 August',
+      date: '2026-08-20', dayNum: 'P4', weekday: 'Thursday 20 August',
       city: 'Verona — Arena di Verona',
       hotel: 'Palazzo Ciopeta',
       hotelMapsQuery: 'Palazzo Ciopeta Verona',
@@ -301,8 +301,8 @@ const TRIP = {
 
     /* ─── DAY 1 · Thu 21 Aug ─── Verona → Bologna */
     {
-      date: '2026-08-21', dayNum: 1, weekday: 'Thursday 21 August',
-      city: 'Verona → Oppeano → Bologna',
+      date: '2026-08-21', dayNum: 1, weekday: 'Friday 21 August',
+      city: 'Verona → San Giovanni in Persiceto → Bologna',
       hotel: 'Art Hotel Commercianti',
       hotelMapsQuery: 'Art Hotel Commercianti Bologna Piazza Maggiore',
       weatherCity: 'Bologna',
@@ -318,7 +318,7 @@ const TRIP = {
 
     /* ─── DAY 2 · Fri 22 Aug ─── Bologna → Rimini */
     {
-      date: '2026-08-22', dayNum: 2, weekday: 'Friday 22 August',
+      date: '2026-08-22', dayNum: 2, weekday: 'Saturday 22 August',
       city: 'Bologna → Rimini',
       hotel: 'Grand Hotel Rimini',
       hotelMapsQuery: 'Grand Hotel Rimini',
@@ -334,14 +334,16 @@ const TRIP = {
 
     /* ─── DAY 3 · Sat 23 Aug ─── Rimini → Gabicce Monte */
     {
-      date: '2026-08-23', dayNum: 3, weekday: 'Saturday 23 August',
-      city: 'Rimini → Gabicce Monte',
+      date: '2026-08-23', dayNum: 3, weekday: 'Sunday 23 August',
+      city: 'Rimini → Fano → Gabicce Monte',
       hotel: 'Dalla Gioconda',
       hotelMapsQuery: 'Dalla Gioconda Gabicce Monte',
       weatherCity: 'Pesaro',
-      note: 'Short coastal drive south to Gabicce Monte — the headland where Emilia-Romagna meets the Marche. Dinner and overnight at Dalla Gioconda, perched at the top with a view of the entire Adriatic arc.',
+      note: 'Lunch at Da Maria al Ponte Rosso in Fano — the finest brodetto alla Fanese in town — then north to Gabicce Monte for dinner at Dalla Gioconda. Hotel is at the restaurant.',
       stops: [
-        { time: '~15:00', title: 'Drive: Rimini → Gabicce Monte', type: 'drive', tag: 'Drive', drive: { km: 35, hrs: '~35 min', via: 'SS16 coastal' }, notes: 'Follow the coastal road SS16 — scenic, not fast, but the Adriatic is always in view.' },
+        { time: '~12:00', title: 'Drive: Rimini → Fano', type: 'drive', tag: 'Drive', drive: { km: 47, hrs: '~40 min', via: 'SS16' }, notes: '' },
+        { time: '13:00', title: 'Da Maria al Ponte Rosso', subtitle: 'Lunch · Brodetto alla Fanese · Fano', type: 'restaurant', badge: 'walkin', badgeClass: 'walkin', locationName: 'Via IV Novembre 86, 61032 Fano PU', mapsQuery: 'Da Maria al Ponte Rosso Fano', notes: 'Walk-in. A small, thoroughly renowned brodetto spot in Fano — the city that claims the original recipe for brodetto alla Fanese (white wine, no tomato). Cited repeatedly as the definitive local reference. Verify Sunday opening.' },
+        { time: '~15:00', title: 'Drive: Fano → Gabicce Monte', type: 'drive', tag: 'Drive', drive: { km: 20, hrs: '~20 min', via: 'SS16' }, notes: '' },
         { time: '~16:00', title: 'Dalla Gioconda', subtitle: 'Check-in · restaurant-hotel · 1 night', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: "Via dell'Orizzonte 2, 61011 Gabicce Monte PU", mapsQuery: 'Dalla Gioconda Gabicce Monte', phone: '+390541962295', web: 'https://dallagioconda.it', notes: 'Confirmed. At the highest point of Gabicce Monte — panoramic terrace over the entire Adriatic from the Romagna coast to Croatia.' },
         { time: '20:30', title: 'Dalla Gioconda', subtitle: 'Dinner · Michelin Star · OAD 209 · Chef Davide Di Fabio', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: "Via dell'Orizzonte 2, Gabicce Monte", mapsQuery: 'Dalla Gioconda Gabicce Monte', phone: '+390541962295', web: 'https://dallagioconda.it', notes: 'For 2. Davide Di Fabio — trained at Osteria Francescana — creates precise, produce-led cuisine from his own kitchen garden. One of the most beautiful restaurant terraces in Italy.' }
       ]
@@ -349,7 +351,7 @@ const TRIP = {
 
     /* ─── DAY 4 · Sun 24 Aug ─── Gabicce Monte → Senigallia */
     {
-      date: '2026-08-24', dayNum: 4, weekday: 'Sunday 24 August',
+      date: '2026-08-24', dayNum: 4, weekday: 'Monday 24 August',
       city: 'Gabicce Monte → Pesaro → Senigallia',
       hotel: 'Visionair Suites & SPA',
       hotelMapsQuery: 'Visionair Suites Senigallia',
@@ -366,7 +368,7 @@ const TRIP = {
 
     /* ─── DAY 5 · Mon 25 Aug ─── Senigallia · Uliassi */
     {
-      date: '2026-08-25', dayNum: 5, weekday: 'Monday 25 August',
+      date: '2026-08-25', dayNum: 5, weekday: 'Tuesday 25 August',
       city: 'Senigallia — no driving',
       hotel: 'Visionair Suites & SPA',
       hotelMapsQuery: 'Visionair Suites Senigallia',
@@ -381,14 +383,15 @@ const TRIP = {
 
     /* ─── DAY 6 · Tue 26 Aug ─── Senigallia → Porto d\'Ascoli */
     {
-      date: '2026-08-26', dayNum: 6, weekday: 'Tuesday 26 August',
-      city: "Senigallia → Porto d'Ascoli",
+      date: '2026-08-26', dayNum: 6, weekday: 'Wednesday 26 August',
+      city: "Senigallia · Porto d'Ascoli",
       hotel: 'Hotel Marconi',
       hotelMapsQuery: "Hotel Marconi San Benedetto del Tronto",
       weatherCity: 'Pescara',
-      note: "Long drive south down the Adriatic autostrada. Dinner at chef Palestini's osteria in Porto d'Ascoli — the restaurant that left a very strong desire to return.",
+      note: "Lunch at Trattoria Vino e Cibo, then south down the A14. Dinner at chef Palestini's osteria in Porto d'Ascoli.",
       stops: [
-        { time: '~14:00', title: "Drive: Senigallia → Porto d'Ascoli", type: 'drive', tag: 'Drive', drive: { km: 148, hrs: '~1h 50min', via: 'A14' }, notes: 'Straight down the A14 Adriatica. The coast becomes more rugged south of Pesaro.' },
+        { time: '12:30', title: 'Trattoria Vino e Cibo', subtitle: 'Lunch · Walk-in · Senigallia', type: 'restaurant', badge: 'walkin', badgeClass: 'walkin', locationName: 'Via Fagnani 16, 60019 Senigallia AN', mapsQuery: 'Trattoria Vino e Cibo Senigallia', phone: '+390716320 6', notes: 'Walk-in. A well-regarded Senigallia trattoria. A final local lunch before driving south. Verify Wednesday opening.' },
+        { time: '~14:30', title: "Drive: Senigallia → Porto d'Ascoli", type: 'drive', tag: 'Drive', drive: { km: 148, hrs: '~1h 50min', via: 'A14' }, notes: 'Straight down the A14 Adriatica. The coast becomes more rugged south of Pesaro.' },
         { time: '~16:00', title: 'Hotel Marconi', subtitle: 'Check-in · San Benedetto del Tronto', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Maffei 114, 63039 San Benedetto del Tronto AP', mapsQuery: 'Hotel Marconi San Benedetto del Tronto', phone: '+390735581454', notes: "Confirmed. Seafront hotel in San Benedetto del Tronto — 10 min from Porto d'Ascoli and Osteria Caserma Guelfa." },
         { time: 'Evening', title: 'Osteria Caserma Guelfa', subtitle: "Dinner · Porto d'Ascoli · Chef Palestini", type: 'restaurant', badge: 'walkin', badgeClass: 'walkin', locationName: "Via Guelfa Caserma 5, 63074 Porto d'Ascoli AP", mapsQuery: "Osteria Caserma Guelfa Porto d'Ascoli", notes: "Chef Palestini — who cooked brodetto and a celebrated sea bass crudo in a temporary beachfront space while the osteria was under repair — left a very strong desire to return. The permanent space is now fully restored. Call ahead to verify Wednesday opening." }
       ]
@@ -396,7 +399,7 @@ const TRIP = {
 
     /* ─── DAY 7 · Wed 27 Aug ─── Porto d\'Ascoli → Vasto → Termoli */
     {
-      date: '2026-08-27', dayNum: 7, weekday: 'Wednesday 27 August',
+      date: '2026-08-27', dayNum: 7, weekday: 'Thursday 27 August',
       city: "Porto d'Ascoli → Vasto → Termoli",
       hotel: 'Residence Sveva',
       hotelMapsQuery: 'Residence Sveva Termoli',
@@ -413,7 +416,7 @@ const TRIP = {
 
     /* ─── DAY 8 · Thu 28 Aug ─── Termoli → Peschici → Vieste */
     {
-      date: '2026-08-28', dayNum: 8, weekday: 'Thursday 28 August',
+      date: '2026-08-28', dayNum: 8, weekday: 'Friday 28 August',
       city: 'Termoli → Gargano Peninsula',
       hotel: 'Tra Cielo e Mare',
       hotelMapsQuery: 'Tra Cielo e Mare Vieste',
@@ -430,7 +433,7 @@ const TRIP = {
 
     /* ─── DAY 9 · Fri 29 Aug ─── Vieste → Matera */
     {
-      date: '2026-08-29', dayNum: 9, weekday: 'Friday 29 August',
+      date: '2026-08-29', dayNum: 9, weekday: 'Saturday 29 August',
       city: 'Vieste → Matera',
       hotel: 'Aquatio Cave Luxury Hotel & Spa',
       hotelMapsQuery: 'Aquatio Cave Luxury Hotel Matera',
@@ -444,44 +447,27 @@ const TRIP = {
       ]
     },
 
-    /* ─── DAY 10 · Sat 30 Aug ─── Matera / Bari — Pier driving */
+    /* ─── DAY 10 · Sun 30 Aug ─── Matera — Pier driving */
     {
-      date: '2026-08-30', dayNum: 10, weekday: 'Saturday 30 August',
-      city: 'Matera · Bari — Pier driving',
+      date: '2026-08-30', dayNum: 10, weekday: 'Sunday 30 August',
+      city: 'Basilicata Winery · Alberobello — Pier driving',
       hotel: 'Sextantio Le Grotte della Civita',
       hotelMapsQuery: 'Sextantio Le Grotte della Civita Matera',
-      weatherCity: 'Bari',
-      note: 'Pier Vernole takes the wheel. Old Bari in the morning — private access to houses and workshops, fresh pasta made by the nonnas. Yacht Club for lunch. Vitantonio Lombardo for dinner.',
-      stops: [
-        { time: 'Morning', title: 'Bari vecchia · Private tour with Pier', subtitle: 'Old town · pasta-making · focaccia · panzerotti', type: 'leisure', badge: 'Host', badgeClass: 'host', locationName: 'Bari Vecchia, Bari BA', mapsQuery: 'Bari Vecchia centro storico', notes: 'Pierpaolo Vernole — local expert with connections throughout Bari — guides through the old town, providing access to private houses, backstores, and artisan workshops. Tasting of real focaccia barese, popizze, and taralli. Pasta made by the real old women of old Bari.' },
-        { time: '12:30', title: 'Yacht Club Bari', subtitle: 'Lunch · Exclusive members\' club · Assassina pasta', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Bari BA', mapsQuery: 'Yacht Club Bari', notes: 'Via Pierpaolo. The most exclusive private club in the region — located inside a historic theatre, members are politicians, bankers, and leading figures. A completely bespoke menu (not the standard member\'s menu) with fish selected fresh that morning. The finest spaghetti all\'assassina available — the genuine article.' },
-        { time: 'Afternoon', title: 'Matera · stroll the Sassi', subtitle: 'Return from Bari', type: 'leisure', tag: 'Leisure', notes: 'Pier drops back in Matera. Walk the Sassi in the lower afternoon heat — the light on the limestone is extraordinary from 16:00 onwards.' },
-        { time: '~16:00', title: 'Sextantio Le Grotte della Civita', subtitle: 'Check-in · 1 night · Sasso Caveoso', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Civita 28, 75100 Matera MT', mapsQuery: 'Sextantio Le Grotte della Civita Matera', phone: '+390835332744', web: 'https://sextantio.it', notes: 'Confirmed. <em>Ref: 9093289030888.</em> 18 caves restored under David Chipperfield\'s direction. Candles instead of lamps; no televisions by design. Breakfast in a medieval church. The most atmospheric hotel in Italy — only 18 rooms, book early.' },
-        { time: '20:00', title: 'Vitantonio Lombardo', subtitle: 'Dinner · Michelin Star · Cave restaurant · Sassi di Matera', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Via Madonna delle Virtù 13, 75100 Matera MT', mapsQuery: 'Vitantonio Lombardo ristorante Matera', phone: '+390835335475', web: 'https://vlristorante.it', notes: 'Via Pierpaolo — personal connection, best service guaranteed. For 2. Tasting menu only: Heart, Head, Gut. Chef Vitantonio Lombardo\'s cuisine is rooted in Lucanian tradition, interpreted with emotional intelligence in an old cave in the Sassi. A post-dinner walk through the illuminated ravine is unmissable.' }
-      ]
-    },
-
-    /* ─── DAY 11 · Sun 31 Aug ─── Matera — Pier driving */
-    {
-      date: '2026-08-31', dayNum: 11, weekday: 'Sunday 31 August',
-      city: 'Basilicata Winery · Alberobello — Pier driving',
-      hotel: 'Palazzo Gattini Luxury Hotel',
-      hotelMapsQuery: 'Palazzo Gattini Matera',
       weatherCity: 'Matera',
       note: 'Pier drives again. A private winery tour in Basilicata — the same producer who hosts Mærge and who Pier gifted to Doujin and Sugita. Alberobello in the afternoon. La Lopa for dinner.',
       stops: [
         { time: 'Morning', title: 'Private tour · Basilicata wine producer', subtitle: 'Vineyard · tasting · fresh cheese · aperitivo + lunch', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Basilicata (location TBC with Pier)', mapsQuery: 'Matera Basilicata wineyards', notes: 'Via Pierpaolo. Visit the main wine producer in Basilicata — walk the vineyards, taste wines with fresh cheeses, and stay for an aperitivo and full lunch with wine pairings. These are the same wines Pier gifted to Doujin, Sugita, and others — and the reason Mærge is coming to the region.' },
         { time: 'Afternoon', title: 'Alberobello', subtitle: 'The trulli village · UNESCO World Heritage', type: 'leisure', tag: 'Leisure', locationName: 'Alberobello, BA', mapsQuery: 'Alberobello trulli UNESCO', notes: 'The iconic trulli — circular dry-stone houses with conical roofs — are found only in this corner of Puglia. Officially twinned with Shirakawa-gō in Japan. The Rione Monti district has over 1,000 trulli.' },
         { time: 'Late afternoon', title: "Pier's villa · aperitivo", subtitle: 'Private residential village · pool', type: 'leisure', badge: 'Host', badgeClass: 'host', notes: 'Pierpaolo welcomes the group to his villa in a private residential village — pool, beach access, and a genuine Bari home. Panzerotti if the mood takes it.' },
-        { time: '~16:30', title: 'Palazzo Gattini Luxury Hotel', subtitle: 'Check-in · 3 nights · Piazza Duomo · Matera', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Duomo 13/14, 75100 Matera MT', mapsQuery: 'Palazzo Gattini Matera', phone: '+390835334358', web: 'https://vretreats.com/palazzo-gattini', notes: 'Confirmed. <em>Ref: 12889RKCGB0000000290.</em> 3 nights (Sun 31 Aug – Wed 3 Sep). Overlooking Matera\'s cathedral square — the most prestigious address in the city.' },
+        { time: '~16:30', title: 'Sextantio Le Grotte della Civita', subtitle: 'Check-in · 1 night · Sasso Caveoso', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Civita 28, 75100 Matera MT', mapsQuery: 'Sextantio Le Grotte della Civita Matera', phone: '+390835332744', web: 'https://sextantio.it', notes: 'Confirmed. <em>Ref: 9093289030888.</em> 18 caves restored under David Chipperfield\'s direction. Candles instead of lamps, no televisions. Breakfast in a medieval church.' },
         { time: 'Evening', title: 'La Lopa', subtitle: 'Dinner · Matera · Via Pierpaolo', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Matera MT', mapsQuery: 'La Lopa ristorante Matera', notes: 'Via Pierpaolo — personal connection to the owner. Pier notes it\'s exceptional for both food and location in the Sassi. "I don\'t want to bother you for dinner if you want to be alone — I will provide the best service anyway."' }
       ]
     },
 
-    /* ─── DAY 12 · Mon 1 Sep ─── Castellana · Locorotondo · Matera */
+    /* ─── DAY 11 · Mon 31 Aug ─── Castellana · Locorotondo · Matera */
     {
-      date: '2026-09-01', dayNum: 12, weekday: 'Monday 1 September',
-      city: 'Castellana Grotte · Locorotondo · Matera',
+      date: '2026-08-31', dayNum: 11, weekday: 'Monday 31 August',
+      city: 'Castellana Grotte · Locorotondo · U Curdunn',
       hotel: 'Palazzo Gattini Luxury Hotel',
       hotelMapsQuery: 'Palazzo Gattini Matera',
       weatherCity: 'Bari',
@@ -500,7 +486,7 @@ const TRIP = {
 
     /* ─── DAY 13 · Tue 2 Sep ─── Ostuni · Polignano · Matera */
     {
-      date: '2026-09-02', dayNum: 13, weekday: 'Tuesday 2 September',
+      date: '2026-09-01', dayNum: 12, weekday: 'Tuesday 1 September',
       city: 'Ostuni · Polignano a Mare',
       hotel: 'Palazzo Gattini Luxury Hotel',
       hotelMapsQuery: 'Palazzo Gattini Matera',
@@ -519,7 +505,7 @@ const TRIP = {
 
     /* ─── DAY 14 · Wed 3 Sep ─── Departure */
     {
-      date: '2026-09-03', dayNum: 14, weekday: 'Wednesday 3 September',
+      date: '2026-09-02', dayNum: 13, weekday: 'Wednesday 2 September',
       city: 'Matera → Bari → Copenhagen',
       hotel: '—',
       weatherCity: 'Bari',
@@ -649,7 +635,7 @@ function renderItinerary() {
       <div class="hero-sub">Adriatic · Gargano · Puglia · Matera</div>
       <div class="hero-rule"></div>
       <div class="hero-meta">
-        <span>🗓 <strong>17 Aug – 3 Sep 2026</strong></span>
+        <span>🗓 <strong>17 Aug – 2 Sep 2026</strong></span>
         <span>🚂 <strong>SZG → VRN</strong></span>
         <span>✈️ <strong>BRI → CPH</strong></span>
         <span>🏨 <strong>12 hotels</strong></span>
@@ -763,7 +749,7 @@ function renderUtilities() {
       <div class="booking-row"><div class="name">Osteria Botteghe Antiche (via Pier)<span class="sub">Mon 1 Sep · lunch · Putignano</span></div><span class="badge host">Via Pier</span></div>
       <div class="booking-row"><div class="name">U Curdunn (via Pier)<span class="sub">Mon 1 Sep · dinner · Matera</span></div><span class="badge host">Via Pier</span></div>
       <div class="booking-row"><div class="name">Osteria del Tempo Perso (via Pier)<span class="sub">Tue 2 Sep · lunch · Ostuni</span></div><span class="badge host">Via Pier</span></div>
-      <div class="booking-row"><div class="name">SAS SK2518 · BRI → CPH<span class="sub">Wed 3 Sep · dep 12:05 · Business</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">SAS SK2518 · BRI → CPH<span class="sub">Wed 2 Sep · dep 12:05 · Business</span></div><span class="badge confirmed">Confirmed</span></div>
 
       <div class="kv-key" style="margin-top:14px;">Still to book / verify ⚠️</div>
       <div class="booking-row"><div class="name">Antica Osteria del Mirasole<span class="sub">Thu 21 Aug · dinner · verify August opening</span></div><span class="badge priority">Action</span></div>
