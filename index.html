@@ -308,7 +308,7 @@ const TRIP = {
       stops: [
         { time: 'Morning', title: 'Verona · free day', subtitle: 'Arena · Juliet\'s House · Castelvecchio · Piazza delle Erbe', type: 'leisure', tag: 'Leisure', notes: 'The Arena di Verona (1st century AD) is open for visits in the morning. Castelvecchio and its Scaliger bridge are a 10-minute walk from Palazzo Ciopeta.' },
         { time: '~19:00', title: 'Dinner · free choice', subtitle: 'Allow time before the 21:15 concert', type: 'restaurant', tag: 'Open', notes: "L'Oste Scuro opens at 18:45 on performance nights — ideal for a pre-show dinner. Or explore the wine bars around Piazza dei Signori." },
-        { time: '21:15', title: 'Viva Vivaldi: The Four Seasons', subtitle: 'Immersive Concert · Arena di Verona · 103rd Festival', type: 'leisure', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Bra, 37121 Verona', mapsQuery: 'Arena di Verona', notes: 'Balich Wonder Studio (Emmy-winning director of 16 Olympic ceremonies). 29-piece Fondazione Arena orchestra · Giovanni Andrea Zanon, violin. Transparent LED screens and 3D immersive projections. Winner of First Prize at BEA World Festival 2025. <em>Arrive 30 min early — stone seating, comfortable shoes recommended.</em>' }
+        { time: '19:00', title: 'Viva Vivaldi: The Four Seasons', subtitle: 'Star Roof entry · Arena di Verona · 103rd Festival', type: 'leisure', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Bra, 37121 Verona', mapsQuery: 'Arena di Verona', notes: 'Ticket ref: <em>VIVATK162755551925</em>. Star Roof entry from 19:00 (code TL40RY001743599480-65). Main show: 21:30 · Poltronissima Platinum · Palco Reale · Row 54 · Seats 29 &amp; 30 (code TL40RY001743608924-65). Balich Wonder Studio · Giovanni Andrea Zanon, violin · Transparent LED screens · 3D immersive projections. <em>Arrive at Star Roof by 19:00. Comfortable shoes — stone surfaces.</em>' }
       ]
     },
 
@@ -319,11 +319,10 @@ const TRIP = {
       hotel: 'Palazzo Ciopeta',
       hotelMapsQuery: 'Palazzo Ciopeta Verona',
       weatherCity: 'Verona',
-      note: 'Final day in Verona. Collect the rental car this morning — the drive begins tomorrow. Nabucco tonight at 21:00, approx. 3h 06min including one interval.',
+      note: 'Final day in Verona before the drive begins tomorrow. Nabucco tonight at 21:00 — approx. 3h 06min including one interval. Rental car collected tomorrow morning (Thu 21 Aug · 11:00 · Verona Central Station).',
       stops: [
-        { time: '10:00', title: 'Alfa Romeo Junior — collect', subtitle: 'Sixt · Verona Central Station', type: 'drive', tag: 'Car', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Verona Porta Nuova Station — Sixt desk', mapsQuery: 'Sixt Verona Porta Nuova', notes: 'Confirmed with Sixt. Unlimited mileage. CDW + theft coverage included. Drop-off: Bari Airport BRI · Wed 3 Sep. Drive starts tomorrow morning — park near Palazzo Ciopeta overnight.' },
         { time: '~18:45', title: 'Dinner · free choice', subtitle: 'Allow time before the 21:00 opera', type: 'restaurant', tag: 'Open', notes: "L'Oste Scuro kitchen opens at 18:45 on Arena performance nights. Ideal for a pre-Nabucco dinner — 10 minutes' walk to the Arena." },
-        { time: '21:00', title: 'Nabucco — Giuseppe Verdi', subtitle: 'Opera · Arena di Verona · 103rd Festival', type: 'leisure', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Bra, 37121 Verona', mapsQuery: 'Arena di Verona', notes: "Verdi's choral masterpiece — the opera that made his name at La Scala in 1842. New production by Stefano Poda (sets, costumes, lighting). The great Va, pensiero chorus — 'Fly, my thoughts, on wings of gold' — performed under open stars in a Roman amphitheatre built in the 1st century AD. Duration approx. 3h 06min including one interval." }
+        { time: '21:00', title: 'Nabucco — Giuseppe Verdi', subtitle: 'Opera · Arena di Verona · 103rd Festival', type: 'leisure', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Bra, 37121 Verona', mapsQuery: 'Arena di Verona', notes: 'Ticket ref: <em>VIVATK162755551925</em> · Code TL40RY001743619625-65. Poltronissima Platinum · Row 10 · Seats 30 &amp; 32. Verdi\'s choral masterpiece — new production by Stefano Poda (sets, costumes, lighting). The great Va, pensiero chorus performed under open stars in a 1st-century Roman amphitheatre. Duration approx. 3h 06min including one interval.' }
       ]
     },
 
@@ -334,11 +333,10 @@ const TRIP = {
       hotel: 'Art Hotel Commercianti',
       hotelMapsQuery: 'Art Hotel Commercianti Bologna Piazza Maggiore',
       weatherCity: 'Bologna',
-      note: 'The drive begins. First lunch at a Michelin-starred restaurant 15 minutes south of Verona, then south to Bologna through the Po valley.',
+      note: 'The drive begins. Direct to San Giovanni in Persiceto for dinner at Antica Osteria del Mirasole, then into Bologna for the night.',
       stops: [
-        { time: '~11:30', title: 'Drive: Verona → Oppeano', type: 'drive', tag: 'Drive', drive: { km: 15, hrs: '~20 min', via: 'SS12' }, notes: '15 min south of Verona in the Feniletto nature reserve.' },
-        { time: '12:30', title: 'Famiglia Rana', subtitle: 'Lunch · Michelin Star · OAD 558', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Feniletto 2, 37050 Oppeano VR', mapsQuery: 'Famiglia Rana Oppeano ristorante', phone: '+390457130047', notes: 'For 2. Chef Francesco Sodano\'s contemporary cuisine rooted in the Veronese countryside — elegant family estate with remarkable seasonal menus and superb wine pairing. <em>Verify August opening before departure.</em>' },
-        { time: '~14:30', title: 'Drive: Oppeano → San Giovanni in Persiceto', type: 'drive', tag: 'Drive', drive: { km: 120, hrs: '~1h 40min', via: 'A13 / A1' }, notes: '' },
+        { time: '11:00', title: 'Alfa Romeo Junior — collect', subtitle: 'Sixt · Verona Central Station · Piazzale XXV Aprile', type: 'drive', tag: 'Car', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Verona Central Station — Sixt desk · Piazzale XXV Aprile, 37138 Verona', mapsQuery: 'Sixt Verona Centrale stazione', notes: 'Booking ref: <em>9735303959</em>. Compact Elite SUV · Alfa Romeo Junior or similar · Automatic. Unlimited km · No deductible · 100% coverage · 24/7 breakdown. Rental: €1,499.83 at pickup + €300 refundable deposit. Free cancellation until 21 Aug. Drop-off: Bari Airport BRI · Wed 2 Sep 11:00.' },
+        { time: '~11:30', title: 'Drive: Verona → San Giovanni in Persiceto', type: 'drive', tag: 'Drive', drive: { km: 135, hrs: '~1h 45min', via: 'A22 / A1' }, notes: 'Straight down the autostrada to Bologna, exit for San Giovanni in Persiceto.' },
         { time: '19:30', title: 'Antica Osteria del Mirasole', subtitle: 'Dinner · GM Selected · San Giovanni in Persiceto', type: 'restaurant', badge: 'Pending', badgeClass: 'pending', locationName: 'Via Giacomo Matteotti 17, 40017 San Giovanni in Persiceto BO', mapsQuery: 'Antica Osteria del Mirasole San Giovanni Persiceto', notes: 'A beloved Emilian institution 20 min west of Bologna — silken tortellini in brodo, gramigna, tagliatelle al ragù in a room of cheerful floral plates. <em>Verify August opening — some Bologna trattorias close in August.</em>' },
         { time: '~21:30', title: 'Drive: → Bologna · check-in', type: 'drive', tag: 'Drive', drive: { km: 22, hrs: '~20 min', via: 'SP27' }, notes: '' },
         { time: '~22:00', title: 'Art Hotel Commercianti', subtitle: 'Check-in · Piazza Maggiore · 1 night', type: 'hotel', badge: 'Priority', badgeClass: 'priority', locationName: "Via de' Pignattari 11, 40124 Bologna", mapsQuery: 'Art Hotel Commercianti Bologna', phone: '+390517457511', web: 'https://art-hotel-commercianti.com', notes: '<em>Not yet booked.</em> 12th-century palazzo on Piazza Maggiore — vaulted ceilings, gothic windows overlooking the Basilica di San Petronio. Book directly at art-hotel-commercianti.com' }
@@ -556,7 +554,7 @@ const TRIP = {
       stops: [
         { time: 'Morning', title: 'Palazzo Gattini · checkout', type: 'hotel', tag: 'Checkout', notes: 'Last morning in the Sassi. The cathedral square at dawn is the final image.' },
         { time: '~09:30', title: 'Drive: Matera → Bari Airport BRI', type: 'drive', tag: 'Drive', drive: { km: 65, hrs: '~1h', via: 'SS99' }, notes: 'Allow 1h for the drive. Drop the Alfa Romeo at the Sixt desk, BRI terminal. Check-in recommended by 10:30.' },
-        { time: '10:00', title: 'Drop car · Sixt · Bari Airport BRI', subtitle: 'Alfa Romeo Junior return', type: 'drive', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Bari Karol Wojtyla Airport (BRI)', mapsQuery: 'Bari Airport BRI Sixt car rental', notes: 'Confirmed with Sixt. Drop by 10:00.' },
+        { time: '11:00', title: 'Drop car · Sixt · Bari Airport BRI', subtitle: 'Alfa Romeo Junior return · Booking 9735303959', type: 'drive', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Bari Karol Wojtyla Airport — Sixt · Viale Enzo Ferrari, Bari 70128', mapsQuery: 'Sixt Bari Airport car rental', notes: 'Drop-off 11:00. Ref: <em>9735303959</em>. Return with same fuel level.' },
         { time: '12:05', title: 'SAS SK2518 — Bari → Copenhagen', subtitle: 'BRI → CPH · Business class', type: 'flight', tag: 'Flight', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Bari Karol Wojtyla Airport (BRI)', mapsQuery: 'Bari Airport BRI departures', notes: 'Departure 12:05 · Arrival Copenhagen CPH 14:35 · 2h 30min · Business class. Confirmed.' }
       ]
     }
@@ -682,7 +680,7 @@ function renderItinerary() {
         <span>🚂 <strong>SZG → VRN</strong></span>
         <span>✈️ <strong>BRI → CPH</strong></span>
         <span>🏨 <strong>12 hotels</strong></span>
-        <span>🍽 <strong>23 restaurants</strong></span>
+        <span>🍽 <strong>22 restaurants</strong></span>
         <span>🌊 <strong>~1,800 km</strong></span>
       </div>
       <div class="hero-name">Gerhard Huber</div>
@@ -777,9 +775,8 @@ function renderUtilities() {
       <div class="kv-key" style="margin-top:6px;">Confirmed ✅</div>
       <div class="booking-row"><div class="name">Apostelstube ⭐ at Hotel Elephant<span class="sub">Sun 17 Aug · 19:45 · Bressanone</span></div><span class="badge confirmed">Confirmed</span></div>
       <div class="booking-row"><div class="name">L'Oste Scuro<span class="sub">Mon 18 Aug · 19:30 · Verona</span></div><span class="badge confirmed">Confirmed</span></div>
-      <div class="booking-row"><div class="name">Viva Vivaldi — Arena di Verona<span class="sub">Tue 19 Aug · 21:15</span></div><span class="badge confirmed">Confirmed</span></div>
-      <div class="booking-row"><div class="name">Nabucco — Arena di Verona<span class="sub">Wed 20 Aug · 21:00</span></div><span class="badge confirmed">Confirmed</span></div>
-      <div class="booking-row"><div class="name">Familia Rana ⭐<span class="sub">Thu 21 Aug · lunch · Oppeano</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Viva Vivaldi — Arena di Verona<span class="sub">Tue 19 Aug · Star Roof 19:00 · Show 21:30 · Row 54 Seats 29 &amp; 30</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Nabucco — Arena di Verona<span class="sub">Wed 20 Aug · 21:00 · Poltronissima Platinum · Row 10 Seats 30 &amp; 32</span></div><span class="badge confirmed">Confirmed</span></div>
       <div class="booking-row"><div class="name">Dalla Gioconda ⭐<span class="sub">Sat 23 Aug · 20:30 · Gabicce Monte</span></div><span class="badge confirmed">Confirmed</span></div>
       <div class="booking-row"><div class="name">Nostrano Pesaro<span class="sub">Sun 24 Aug · 12:30 · Pesaro</span></div><span class="badge confirmed">Confirmed</span></div>
       <div class="booking-row"><div class="name">Madonnina del Pescatore ⭐⭐<span class="sub">Sun 24 Aug · 20:45 · Senigallia</span></div><span class="badge confirmed">Confirmed</span></div>
@@ -815,7 +812,7 @@ function renderUtilities() {
       <h2 class="util-title">Driving notes</h2>
       <div class="util-sub">Italy only · ~1,800 km · 13 driving days</div>
       <div class="kv-list">
-        <div class="kv-item"><span class="kv-key">Car</span><span class="kv-val">Alfa Romeo Junior (Sixt). Unlimited mileage. CDW + theft. Pick-up: Verona Central Station 21 Aug. Drop-off: Bari BRI Airport 3 Sep.</span></div>
+        <div class="kv-item"><span class="kv-key">Car</span><span class="kv-val">Alfa Romeo Junior or similar (Sixt · Ref: 9735303959). Pickup: Verona Central Station 21 Aug 11:00. Drop-off: Bari BRI Airport 2 Sep 11:00. Unlimited km · No deductible · 100% coverage. €1,499.83 at pickup.</span></div>
         <div class="kv-item"><span class="kv-key">Autostrada</span><span class="kv-val">The A14 Adriatica is your main artery from Bologna to Bari — runs directly along the Adriatic coast. Pay at barriers by card; keep cash for smaller toll stations.</span></div>
         <div class="kv-item"><span class="kv-key">Tolls</span><span class="kv-val">Budget €80–120 for the full trip. Most barriers accept Visa/Mastercard contactless. Cash lanes always available as backup.</span></div>
         <div class="kv-item"><span class="kv-key">Fuel</span><span class="kv-val">~€1.80–2.00 per litre (petrol). Self-service stations open 24h; staffed stations may close 13:00–15:30. Brianza (AGIP/ENI) and Q8 are most common along the A14.</span></div>
@@ -832,8 +829,9 @@ function renderUtilities() {
       <div class="kv-list">
         <div class="kv-item"><span class="kv-key">Who</span><span class="kv-val">Engineer based in Bari — his firm renovated the Bari cathedral, castle, and other landmark buildings. Passionate about Japanese culture, extensive local network.</span></div>
         <div class="kv-item"><span class="kv-key">Availability</span><span class="kv-val">With you Sat 30 Aug and Sun 31 Aug (driving). Has personally arranged all Puglia restaurants from 29 Aug onwards. Connected to Vitantonio Lombardo, Botteghe Antiche, La Lopa, U Curdunn, Osteria del Tempo Perso, Yacht Club.</span></div>
-        <div class="kv-item"><span class="kv-key">Email</span><span class="kv-val">pierpa3000@hotmail.com</span></div>
-        <div class="kv-item"><span class="kv-key">WhatsApp</span><span class="kv-val">Via the "Pier in Puglia" group chat</span></div>
+        <div class="kv-item"><span class="kv-key">Phone</span><span class="kv-val">+39 331 251 9079 (WhatsApp)</span></div>
+        <div class="kv-item"><span class="kv-key">Email</span><span class="kv-val">pierpa3000@hotmail.com · p.vernole@outlook.it</span></div>
+        <div class="kv-item"><span class="kv-key">WhatsApp group</span><span class="kv-val">"Pier in Puglia" — Gerhard + Tomoko + Pier</span></div>
       </div>
     </div>
 
@@ -902,8 +900,8 @@ function renderEmergency() {
     <div class="util-card">
       <h2 class="util-title">Pierpaolo Vernole · Bari</h2>
       <div class="util-sub">Local expert · contact for all Puglia days</div>
-      <a class="contact-card" href="mailto:pierpa3000@hotmail.com"><div class="contact-name">Pierpaolo Vernole<span class="sub">pierpa3000@hotmail.com</span></div><span class="contact-phone">✉</span></a>
-      <a class="contact-card" href="mailto:p.vernole@outlook.it"><div class="contact-name">Pierpaolo (alternative email)<span class="sub">p.vernole@outlook.it</span></div><span class="contact-phone">✉</span></a>
+      <a class="contact-card" href="tel:+393312519079"><div class="contact-name">Pierpaolo Vernole<span class="sub">WhatsApp · mobile</span></div><span class="contact-phone">+39 331 251 9079</span></a>
+      <a class="contact-card" href="mailto:pierpa3000@hotmail.com"><div class="contact-name">Pierpaolo · email<span class="sub">pierpa3000@hotmail.com · p.vernole@outlook.it</span></div><span class="contact-phone">✉</span></a>
     </div>
 
     <div class="util-card">
@@ -924,7 +922,8 @@ function renderEmergency() {
     <div class="util-card">
       <h2 class="util-title">Happy Camper · Concierge</h2>
       <div class="util-sub">For anything, any time</div>
-      <a class="contact-card" href="tel:+818069892107"><div class="contact-name">Gerhard<span class="sub">Direct line (Japan number)</span></div><span class="contact-phone">+81 80 6989 2107</span></a>
+      <a class="contact-card" href="tel:+818069892107"><div class="contact-name">Gerhard · Japan<span class="sub">Japan mobile</span></div><span class="contact-phone">+81 80 6989 2107</span></a>
+      <a class="contact-card" href="tel:+447900683683"><div class="contact-name">Gerhard · UK<span class="sub">UK mobile (use in Europe)</span></div><span class="contact-phone">+44 7900 683683</span></a>
       <a class="contact-card" href="mailto:hello@happycamper.food"><div class="contact-name">hello@happycamper.food<span class="sub">Email</span></div><span class="contact-phone">✉</span></a>
     </div>
 
@@ -954,13 +953,19 @@ function setupFX() {
   eur.value = 100;
   convertFX('eur');
 }
+function fmt(n, decimals) {
+  return n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+function parseFmt(val) {
+  return parseFloat(val.replace(/,/g, ''));
+}
 function convertFX(src) {
   const eur = $('#fx-eur'), gbp = $('#fx-gbp'), jpy = $('#fx-jpy');
   if (!eur || !gbp || !jpy) return;
-  let e = parseFloat(eur.value), g = parseFloat(gbp.value), j = parseFloat(jpy.value);
-  if (src==='eur' && !isNaN(e)) { gbp.value=(e*FX_GBP_PER_EUR).toFixed(2); jpy.value=Math.round(e*FX_JPY_PER_EUR); }
-  else if (src==='gbp' && !isNaN(g)) { e=g/FX_GBP_PER_EUR; eur.value=e.toFixed(2); jpy.value=Math.round(e*FX_JPY_PER_EUR); }
-  else if (src==='jpy' && !isNaN(j)) { e=j/FX_JPY_PER_EUR; eur.value=e.toFixed(2); gbp.value=(e*FX_GBP_PER_EUR).toFixed(2); }
+  let e = parseFmt(eur.value), g = parseFmt(gbp.value), j = parseFmt(jpy.value);
+  if (src==='eur' && !isNaN(e)) { gbp.value=fmt(e*FX_GBP_PER_EUR,2); jpy.value=fmt(Math.round(e*FX_JPY_PER_EUR),0); }
+  else if (src==='gbp' && !isNaN(g)) { e=g/FX_GBP_PER_EUR; eur.value=fmt(e,2); jpy.value=fmt(Math.round(e*FX_JPY_PER_EUR),0); }
+  else if (src==='jpy' && !isNaN(j)) { e=j/FX_JPY_PER_EUR; eur.value=fmt(e,2); gbp.value=fmt(e*FX_GBP_PER_EUR,2); }
 }
 
 /* ─── Tabs ──────────────────────────────────────────────────────────── */
