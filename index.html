@@ -1,1 +1,1001 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#fdf8eb" />
+<meta name="color-scheme" content="light" />
+<meta name="format-detection" content="telephone=no" />
+<title>Italy East Coast 2026 · Gerhard · Happy Camper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:          #2a1f1a;
+  --ink-2:        #4a3b32;
+  --ink-3:        #75645a;
+  --ink-4:        #a39185;
+  --cream:        #f8f1e1;
+  --paper:        #fdf8eb;
+  --paper-2:      #fbf3df;
+  --white:        #ffffff;
+  --wine:         #6b1f2a;
+  --wine-deep:    #4a1018;
+  --wine-soft:    #8a3a44;
+  --wine-pale:    #f4e4e6;
+  --ochre:        #b8893a;
+  --ochre-bright: #d4ae6a;
+  --ochre-soft:   #f2e3c5;
+  --olive:        #5c6b3f;
+  --olive-soft:   #e8ecdc;
+  --line:         rgba(107, 31, 42, 0.14);
+  --line-soft:    rgba(107, 31, 42, 0.07);
+  --line-strong:  rgba(107, 31, 42, 0.30);
+  --green:        #2d6a3f;
+  --green-soft:   #d6efd6;
+  --amber:        #b88e2a;
+  --amber-soft:   #fff4cc;
+  --red:          #b8291e;
+  --red-soft:     #fdecea;
+  --grey-soft:    #ececea;
+  --shadow-sm:    0 1px 2px rgba(42,31,26,0.05), 0 1px 1px rgba(42,31,26,0.03);
+  --shadow-md:    0 4px 16px rgba(42,31,26,0.06), 0 1px 3px rgba(42,31,26,0.04);
+  --shadow-lg:    0 12px 32px rgba(42,31,26,0.08), 0 2px 6px rgba(42,31,26,0.04);
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 22px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; background: var(--paper); color: var(--ink); font-size: 15px; line-height: 1.5; min-height: 100dvh; overflow-x: hidden; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+a { color: var(--wine); text-decoration: none; }
+#app-header { position: sticky; top: 0; z-index: 100; background: rgba(253,248,235,0.94); backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top); }
+.header-top { padding: 12px 20px 10px; display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 1200px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.brand-mark { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--wine) 0%, var(--wine-deep) 100%); display: grid; place-items: center; font-size: 16px; flex-shrink: 0; box-shadow: var(--shadow-sm); }
+.brand-text { min-width: 0; }
+.brand-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; line-height: 1; letter-spacing: 0.01em; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-sub { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; font-weight: 500; }
+.clock-block { display: flex; flex-direction: column; align-items: flex-end; text-align: right; flex-shrink: 0; }
+#cest-clock { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 500; letter-spacing: 0.04em; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
+#trip-day-label { font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; font-weight: 500; }
+.tab-nav { display: flex; gap: 4px; padding: 0 20px; border-top: 1px solid var(--line-soft); max-width: 1200px; margin: 0 auto; }
+.tab-btn { flex: 1; padding: 10px 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); border-bottom: 2px solid transparent; transition: color 0.18s, border-color 0.18s; }
+.tab-btn.active { color: var(--wine); border-bottom-color: var(--wine); }
+.tab-btn:active { transform: scale(0.97); }
+.tab-panel { display: none; max-width: 720px; margin: 0 auto; padding: 24px 18px 80px; }
+.tab-panel.active { display: block; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.hero { text-align: center; padding: 28px 16px 26px; background: linear-gradient(180deg, var(--paper-2) 0%, var(--paper) 100%); border: 1px solid var(--line); border-radius: var(--r-lg); margin-bottom: 24px; position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 20% 0%, rgba(184,137,58,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 100%, rgba(107,31,42,0.06) 0%, transparent 50%); pointer-events: none; }
+.hero-eyebrow { font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ochre); font-weight: 600; margin-bottom: 10px; position: relative; }
+.hero-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 44px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 4px; position: relative; }
+.hero-title em { font-style: italic; font-weight: 400; color: var(--wine); }
+.hero-sub { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 19px; color: var(--ink-2); margin-top: 4px; position: relative; }
+.hero-rule { width: 60px; height: 1px; background: var(--ochre); margin: 14px auto; position: relative; }
+.hero-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; font-size: 13px; color: var(--ink-2); position: relative; margin-top: 4px; }
+.hero-meta strong { color: var(--ink); font-weight: 600; }
+.hero-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 500; color: var(--ink); margin-top: 14px; position: relative; letter-spacing: 0.01em; }
+.hero-name-sub { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; font-weight: 500; position: relative; }
+.section-label { display: flex; align-items: center; gap: 12px; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin: 24px 0 14px; }
+.section-label::before, .section-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.hotels-grid { display: grid; gap: 8px; margin-bottom: 8px; }
+.hotel-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: 12px 14px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow-sm); }
+.hotel-num { width: 28px; height: 28px; border-radius: 50%; background: var(--wine-pale); color: var(--wine); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600; flex-shrink: 0; }
+.hotel-info { flex: 1; min-width: 0; }
+.hotel-name { font-weight: 600; font-size: 14px; color: var(--ink); line-height: 1.3; margin-bottom: 2px; }
+.hotel-meta { font-size: 11.5px; color: var(--ink-3); letter-spacing: 0.02em; }
+.hotel-link { color: var(--ochre); font-size: 18px; flex-shrink: 0; }
+.day-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg); margin-bottom: 14px; overflow: hidden; transition: box-shadow 0.2s, border-color 0.2s; }
+.day-card.is-current { border-color: var(--wine); box-shadow: var(--shadow-md), 0 0 0 3px rgba(107,31,42,0.06); }
+.day-card.is-past { opacity: 0.62; }
+.day-header { width: 100%; padding: 14px 16px; display: flex; align-items: center; gap: 12px; text-align: left; transition: background 0.15s; }
+.day-header:hover { background: var(--paper-2); }
+.day-num { width: 38px; height: 38px; flex-shrink: 0; border-radius: 50%; background: var(--cream); border: 1px solid var(--line); display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--ink); }
+.day-card.is-current .day-num { background: var(--wine); color: var(--paper); border-color: var(--wine); }
+.day-meta { flex: 1; min-width: 0; }
+.day-date { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--ink); line-height: 1.15; }
+.day-title { font-size: 12px; color: var(--ink-3); margin-top: 2px; letter-spacing: 0.02em; }
+.day-city-badge { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ochre); font-weight: 600; background: var(--ochre-soft); padding: 3px 8px; border-radius: 10px; flex-shrink: 0; }
+.day-toggle { font-size: 18px; color: var(--ink-3); transition: transform 0.25s; flex-shrink: 0; margin-left: 4px; }
+.day-card.expanded .day-toggle { transform: rotate(180deg); }
+.day-body { display: none; padding: 0 16px 16px; border-top: 1px solid var(--line-soft); }
+.day-card.expanded .day-body { display: block; }
+.day-strip { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 12px 0 14px; border-bottom: 1px solid var(--line-soft); margin-bottom: 14px; }
+.strip-item { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--ink-2); }
+.strip-item .label { font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; flex-shrink: 0; min-width: 56px; }
+.strip-item .val { font-weight: 500; color: var(--ink); flex: 1; }
+.day-note { background: var(--ochre-soft); border-left: 3px solid var(--ochre); padding: 10px 12px; font-size: 13px; font-style: italic; color: var(--ink-2); border-radius: 0 var(--r-sm) var(--r-sm) 0; margin-bottom: 14px; line-height: 1.45; }
+.stops { display: flex; flex-direction: column; gap: 0; }
+.stop { position: relative; padding: 8px 0 18px 38px; border-left: 1px solid var(--line); margin-left: 14px; }
+.stop:last-child { padding-bottom: 4px; }
+.stop::before { content: ""; position: absolute; left: -7px; top: 14px; width: 13px; height: 13px; border-radius: 50%; background: var(--white); border: 2px solid var(--ochre); z-index: 1; }
+.stop[data-type="restaurant"]::before { border-color: var(--wine); }
+.stop[data-type="hotel"]::before { border-color: var(--olive); }
+.stop[data-type="drive"]::before { border-color: var(--ink-3); }
+.stop[data-type="train"]::before { border-color: var(--ochre); }
+.stop[data-type="flight"]::before { border-color: var(--ochre); }
+.stop-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
+.stop-time { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--wine); letter-spacing: 0.01em; flex-shrink: 0; }
+.stop-type-tag { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; padding: 2px 7px; border-radius: 8px; background: var(--paper-2); border: 1px solid var(--line); }
+.stop-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1.2; margin: 2px 0 4px; }
+.stop-subtitle { font-size: 13px; color: var(--ink-2); margin-bottom: 6px; font-style: italic; }
+.badge { display: inline-block; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 3px 8px; border-radius: 10px; margin-right: 5px; margin-bottom: 4px; border: 1px solid transparent; }
+.badge.confirmed { background: var(--green-soft); color: var(--green); border-color: rgba(45,106,63,0.2); }
+.badge.pending   { background: var(--amber-soft); color: var(--amber); border-color: rgba(184,142,42,0.25); }
+.badge.priority  { background: var(--red-soft); color: var(--red); border-color: rgba(184,41,30,0.25); }
+.badge.suggestion{ background: var(--grey-soft); color: var(--ink-3); border-color: var(--line); }
+.badge.host      { background: var(--olive-soft); color: var(--olive); border-color: rgba(92,107,63,0.25); }
+.badge.walkin    { background: var(--grey-soft); color: var(--ink-3); border-color: var(--line); }
+.stop-loc { font-size: 12.5px; color: var(--ink-3); margin: 4px 0 8px; display: flex; gap: 6px; align-items: flex-start; }
+.stop-loc::before { content: "📍"; font-size: 11px; flex-shrink: 0; line-height: 1.4; }
+.stop-notes { font-size: 13px; color: var(--ink-2); line-height: 1.5; margin: 6px 0 10px; }
+.stop-notes em { background: var(--wine-pale); padding: 1px 5px; border-radius: 3px; font-style: normal; color: var(--wine-deep); font-weight: 500; }
+.stop-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.act-btn { display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.02em; background: var(--cream); color: var(--ink); border-radius: 18px; border: 1px solid var(--line); transition: all 0.15s; }
+.act-btn:hover { background: var(--ochre-soft); border-color: var(--ochre); }
+.act-btn:active { transform: scale(0.96); }
+.act-btn.primary { background: var(--wine); color: var(--paper); border-color: var(--wine); }
+.act-btn.primary:hover { background: var(--wine-deep); border-color: var(--wine-deep); }
+.act-btn.tel { background: var(--olive-soft); border-color: rgba(92,107,63,0.25); color: var(--olive); }
+.drive-card { background: var(--paper-2); border: 1px dashed var(--line-strong); border-radius: var(--r-md); padding: 10px 12px; font-size: 12.5px; color: var(--ink-2); display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.drive-card .miles { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--ochre); flex-shrink: 0; }
+.util-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 16px; margin-bottom: 14px; box-shadow: var(--shadow-sm); }
+.util-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--ink); margin-bottom: 4px; line-height: 1.15; }
+.util-sub { font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); font-weight: 600; margin-bottom: 14px; }
+.fx-rate-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ink-3); margin-bottom: 12px; padding: 8px 12px; background: var(--paper-2); border-radius: var(--r-sm); border: 1px solid var(--line-soft); }
+.fx-rate-row strong { color: var(--ink); }
+.fx-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.fx-row label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; width: 36px; flex-shrink: 0; }
+.fx-row input { flex: 1; font: 500 17px 'DM Sans', sans-serif; font-variant-numeric: tabular-nums; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--paper); color: var(--ink); outline: none; transition: border-color 0.15s; }
+.fx-row input:focus { border-color: var(--wine); }
+.kv-list { display: grid; gap: 8px; }
+.kv-item { display: grid; grid-template-columns: minmax(90px, auto) 1fr; gap: 10px; font-size: 13px; padding: 8px 0; border-bottom: 1px solid var(--line-soft); }
+.kv-item:last-child { border-bottom: 0; }
+.kv-key { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; padding-top: 1px; }
+.kv-val { color: var(--ink); font-weight: 500; }
+.kv-val .sub { display: block; color: var(--ink-3); font-weight: 400; font-size: 12px; margin-top: 2px; }
+.tip { background: var(--olive-soft); border-left: 3px solid var(--olive); padding: 10px 12px; font-size: 12.5px; color: var(--ink-2); border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: 12px 0; line-height: 1.5; }
+.tip strong { color: var(--olive); }
+.alert { background: var(--red-soft); border-left: 3px solid var(--red); padding: 10px 12px; font-size: 12.5px; color: var(--ink-2); border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: 12px 0; line-height: 1.5; }
+.alert strong { color: var(--red); }
+.booking-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-soft); font-size: 13px; gap: 8px; }
+.booking-row:last-child { border-bottom: 0; }
+.booking-row .name { font-weight: 500; color: var(--ink); flex: 1; min-width: 0; }
+.booking-row .name .sub { display: block; font-weight: 400; color: var(--ink-3); font-size: 11.5px; margin-top: 1px; }
+.etiq-item { padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.etiq-item:last-child { border-bottom: 0; }
+.etiq-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: var(--wine); margin-bottom: 3px; }
+.etiq-item p { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+.emerg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.emerg-call { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 18px 10px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); text-align: center; transition: transform 0.15s, box-shadow 0.15s; }
+.emerg-call:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.emerg-call:active { transform: scale(0.97); }
+.emerg-icon { font-size: 26px; line-height: 1; }
+.emerg-num { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--wine); line-height: 1; letter-spacing: 0.02em; }
+.emerg-label { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+.contact-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: 12px 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; transition: background 0.15s; }
+.contact-card:hover { background: var(--paper-2); }
+.contact-name { font-weight: 600; font-size: 14px; color: var(--ink); flex: 1; min-width: 0; }
+.contact-name .sub { display: block; font-weight: 400; font-size: 11.5px; color: var(--ink-3); margin-top: 1px; }
+.contact-phone { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: var(--wine); flex-shrink: 0; letter-spacing: 0.02em; }
+.phrase { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); font-size: 13px; }
+.phrase:last-child { border-bottom: 0; }
+.phrase .en { color: var(--ink-3); font-style: italic; }
+.phrase .it { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 500; color: var(--ink); text-align: right; }
+.phrase .it small { display: block; color: var(--ink-3); font-size: 11px; font-style: italic; margin-top: 1px; }
+#toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 22px; opacity: 0; pointer-events: none; transition: all 0.22s cubic-bezier(0.4,0,0.2,1); z-index: 999; white-space: nowrap; max-width: 90vw; box-shadow: var(--shadow-lg); }
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (min-width: 700px) {
+  .header-top { padding: 14px 32px 12px; }
+  .tab-nav { padding: 0 32px; }
+  .tab-btn { font-size: 13px; padding: 12px 20px; flex: none; }
+  .brand-title { font-size: 22px; }
+  #cest-clock { font-size: 21px; }
+  .tab-panel { padding: 28px 28px 80px; max-width: 920px; }
+  .hero-title { font-size: 56px; }
+  .day-strip { grid-template-columns: 1fr 1fr; }
+  .emerg-grid { grid-template-columns: repeat(4, 1fr); }
+  .hotels-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header id="app-header">
+  <div class="header-top">
+    <div class="brand">
+      <div class="brand-mark">🌊</div>
+      <div class="brand-text">
+        <div class="brand-title">Italy East Coast 2026</div>
+        <div class="brand-sub">Happy Camper · 17 Aug – 3 Sep</div>
+      </div>
+    </div>
+    <div class="clock-block">
+      <span id="cest-clock">--:--</span>
+      <span id="trip-day-label">Loading…</span>
+    </div>
+  </div>
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="itinerary" onclick="switchTab('itinerary')">Itinerary</button>
+    <button class="tab-btn" data-tab="utilities" onclick="switchTab('utilities')">Utilities</button>
+    <button class="tab-btn" data-tab="emergency" onclick="switchTab('emergency')">Emergency</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-itinerary" class="tab-panel active"></section>
+  <section id="tab-utilities" class="tab-panel"></section>
+  <section id="tab-emergency" class="tab-panel"></section>
+</main>
+
+<div id="toast" role="status" aria-live="polite">Copied ✓</div>
+
+<script>
+'use strict';
+
+const FX_GBP_PER_EUR = 0.855;
+const FX_JPY_PER_EUR = 163.5;
+const TIMEZONE = 'Europe/Rome';
+
+const TRIP = {
+  tripTitle:  'Italy East Coast 2026',
+  traveler:   'Gerhard Huber',
+  curator:    'Happy Camper Ltd.',
+  contact:    '+81 80 6989 2107',
+  email:      'hello@happycamper.food',
+  startDate:  '2026-08-17',
+  endDate:    '2026-09-03',
+  travelers:  2,
+
+  hotels: [
+    { name: 'Hotel Elephant',                  location: 'Bressanone, South Tyrol',    nights: 'Sun 17 Aug',             ref: '—',                    url: 'https://hotelelephant.com',        phone: '+390472832750',  mapsQuery: 'Hotel Elephant Bressanone' },
+    { name: 'Palazzo Ciopeta',                 location: 'Verona',                     nights: 'Mon 18 – Thu 21 Aug',    ref: '—',                    url: 'https://palazzociopeta.it',        phone: '+390459231965',  mapsQuery: 'Palazzo Ciopeta Verona' },
+    { name: 'Art Hotel Commercianti',          location: 'Bologna',                    nights: 'Thu 21 Aug',             ref: 'Not yet booked',       url: 'https://art-hotel-commercianti.com', phone: '+390517457511', mapsQuery: 'Art Hotel Commercianti Bologna Piazza Maggiore' },
+    { name: 'Grand Hotel Rimini',              location: 'Rimini',                     nights: 'Fri 22 Aug',             ref: 'Not yet booked',       url: 'https://grandhotelrimini.com',     phone: '+390541560001', mapsQuery: 'Grand Hotel Rimini' },
+    { name: 'Dalla Gioconda',                  location: 'Gabicce Monte, PU',          nights: 'Sat 23 Aug',             ref: 'Confirmed',            url: 'https://dallagioconda.it',         phone: '+390541962295', mapsQuery: 'Dalla Gioconda Gabicce Monte' },
+    { name: 'Visionair Suites & SPA',          location: 'Senigallia, AN',             nights: 'Sun 24 – Tue 26 Aug',    ref: 'Confirmed',            url: '',                                 phone: '',              mapsQuery: 'Visionair Suites Senigallia' },
+    { name: 'Hotel Marconi',                   location: 'San Benedetto del Tronto',   nights: 'Tue 26 Aug',             ref: 'Confirmed',            url: '',                                 phone: '+390735581454', mapsQuery: 'Hotel Marconi San Benedetto del Tronto' },
+    { name: 'Residence Sveva',                 location: 'Termoli, CB',                nights: 'Wed 27 Aug',             ref: 'Confirmed',            url: '',                                 phone: '+390875705703', mapsQuery: 'Residence Sveva Termoli' },
+    { name: 'Tra Cielo e Mare',                location: 'Vieste, FG',                 nights: 'Thu 28 Aug',             ref: 'Confirmed',            url: 'https://tracieloemarevieste.com',   phone: '+393508286423', mapsQuery: 'Tra Cielo e Mare Vieste' },
+    { name: 'Aquatio Cave Luxury Hotel & Spa', location: 'Matera',                     nights: 'Fri 29 Aug',             ref: '9093288937874',        url: 'https://aquatiohotel.com',         phone: '+44 20 3027 6614', mapsQuery: 'Aquatio Cave Luxury Hotel Matera' },
+    { name: 'Sextantio Le Grotte della Civita',location: 'Matera',                     nights: 'Sat 30 Aug',             ref: '9093289030888',        url: 'https://sextantio.it',             phone: '+390835332744', mapsQuery: 'Sextantio Le Grotte della Civita Matera' },
+    { name: 'Palazzo Gattini Luxury Hotel',    location: 'Matera',                     nights: 'Sun 31 Aug – Wed 3 Sep', ref: '12889RKCGB0000000290', url: 'https://vretreats.com/palazzo-gattini', phone: '+390835334358', mapsQuery: 'Palazzo Gattini Matera' },
+  ],
+
+  days: [
+
+    /* ─── PROLOGUE 1 · Sun 17 Aug ─── Salzburg → Bressanone */
+    {
+      date: '2026-08-17', dayNum: 'P1', weekday: 'Sunday 17 August',
+      city: 'Salzburg → Bressanone',
+      hotel: 'Hotel Elephant',
+      hotelMapsQuery: 'Hotel Elephant Bressanone',
+      weatherCity: 'Bolzano',
+      note: 'Train day through the Alps. Two legs via Innsbruck — arrive Bressanone mid-afternoon. Dinner at the Michelin-starred Apostelstube within the hotel.',
+      stops: [
+        { time: '10:56', title: 'ÖBB RJX — Salzburg Hbf → Innsbruck Central', subtitle: 'Leg 1 of 2 · direction Bregenz', type: 'train', tag: 'Train', notes: 'Departure 10:56 · Arrival 12:44 · 1h 48min. Change platforms at Innsbruck — 46 min layover. <em>Book at oebb.at or trainline.com</em>' },
+        { time: '13:30', title: 'ÖBB RJ 85 — Innsbruck → Bressanone', subtitle: 'Leg 2 of 2 · direction Venezia Santa Lucia', type: 'train', tag: 'Train', notes: 'Departure 13:30 · Arrival Bressanone 14:55 · 1h 25min. Total journey Salzburg → Bressanone: 4h 01min.' },
+        { time: '~15:30', title: 'Hotel Elephant', subtitle: 'Check-in · Via Rio Bianco 4, Bressanone', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Rio Bianco 4, 39042 Bressanone BZ', mapsQuery: 'Hotel Elephant Bressanone', phone: '+390472832750', web: 'https://hotelelephant.com', notes: 'Historic alpine hotel, family-owned since 1773. The elephant in the name traces to 1550 — an Indian elephant, gift to Emperor Maximilian II, was stabled here on its journey north.' },
+        { time: '19:45', title: 'Apostelstube at Hotel Elephant', subtitle: 'Dinner · Michelin Star · Chef Mathias Bachmann', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Rio Bianco 4, Bressanone', mapsQuery: 'Hotel Elephant Bressanone', phone: '+390472832750', notes: 'For 2. Creative South Tyrolean cuisine — char, mountain herbs, aged Valle Isarco cheeses, local wine. Open Sunday dinner. The classic Zirbelstube panelled room is an alternative if you prefer a more traditional evening.' }
+      ]
+    },
+
+    /* ─── PROLOGUE 2 · Mon 18 Aug ─── Bressanone → Verona */
+    {
+      date: '2026-08-18', dayNum: 'P2', weekday: 'Monday 18 August',
+      city: 'Bressanone → Verona',
+      hotel: 'Palazzo Ciopeta',
+      hotelMapsQuery: 'Palazzo Ciopeta Verona',
+      weatherCity: 'Verona',
+      note: 'Morning free in Bressanone. Train to Verona departs 12:56 — arrive by 15:00. Three nights in the city of the Arena, Romeo & Juliet, and extraordinary brodetto.',
+      stops: [
+        { time: 'Morning', title: 'Bressanone · free time', subtitle: 'Old town, cathedral, Hofburg palace', type: 'leisure', tag: 'Leisure', notes: 'The medieval centre of Bressanone is one of the finest in South Tyrol — Romanesque cathedral, arcaded streets, the Hofburg courtyard.' },
+        { time: '12:56', title: 'ÖBB RJ 83 — Bressanone → Verona Porta Nuova', subtitle: 'Direction Bologna Centrale', type: 'train', tag: 'Train', notes: 'Departure 12:56 · Arrival Verona Porta Nuova 15:00 · 2h 04min. Palazzo Ciopeta is 15 minutes on foot or a short taxi.' },
+        { time: '~15:30', title: 'Palazzo Ciopeta', subtitle: 'Check-in · 3 nights · Via Teatro Filarmonico 4', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Teatro Filarmonico 4, 37121 Verona', mapsQuery: 'Palazzo Ciopeta Verona', phone: '+390459231965', web: 'https://palazzociopeta.it', notes: 'Steps from the Arena and Piazza Bra. Three nights in the city before the drive begins. Cell: +39 342 800 4345 · info@palazzociopeta.it' },
+        { time: '19:30', title: "L'Oste Scuro", subtitle: "Dinner · Michelin Selected · Verona's finest fish", type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Vicolo San Silvestro 10, Verona', mapsQuery: "L'Oste Scuro Verona", phone: '+390445592650', web: 'https://ristoranteostescuro.tv', notes: "For 2. Verona's foremost fish restaurant — fresh oysters, carpaccio, tartare, and precisely cooked Adriatic and Mediterranean seafood through a 700-label wine cellar. On Arena performance nights the kitchen opens at 18:45 for pre-show diners." }
+      ]
+    },
+
+    /* ─── PROLOGUE 3 · Tue 19 Aug ─── Verona · Viva Vivaldi */
+    {
+      date: '2026-08-19', dayNum: 'P3', weekday: 'Tuesday 19 August',
+      city: 'Verona — Arena di Verona',
+      hotel: 'Palazzo Ciopeta',
+      hotelMapsQuery: 'Palazzo Ciopeta Verona',
+      weatherCity: 'Verona',
+      note: 'Free day to explore Verona — the Roman Arena, Juliet\'s House, Castelvecchio, Piazza delle Erbe. Dinner early before the 21:15 immersive concert.',
+      stops: [
+        { time: 'Morning', title: 'Verona · free day', subtitle: 'Arena · Juliet\'s House · Castelvecchio · Piazza delle Erbe', type: 'leisure', tag: 'Leisure', notes: 'The Arena di Verona (1st century AD) is open for visits in the morning. Castelvecchio and its Scaliger bridge are a 10-minute walk from Palazzo Ciopeta.' },
+        { time: '~19:00', title: 'Dinner · free choice', subtitle: 'Allow time before the 21:15 concert', type: 'restaurant', tag: 'Open', notes: "L'Oste Scuro opens at 18:45 on performance nights — ideal for a pre-show dinner. Or explore the wine bars around Piazza dei Signori." },
+        { time: '21:15', title: 'Viva Vivaldi: The Four Seasons', subtitle: 'Immersive Concert · Arena di Verona · 103rd Festival', type: 'leisure', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Bra, 37121 Verona', mapsQuery: 'Arena di Verona', notes: 'Balich Wonder Studio (Emmy-winning director of 16 Olympic ceremonies). 29-piece Fondazione Arena orchestra · Giovanni Andrea Zanon, violin. Transparent LED screens and 3D immersive projections. Winner of First Prize at BEA World Festival 2025. <em>Arrive 30 min early — stone seating, comfortable shoes recommended.</em>' }
+      ]
+    },
+
+    /* ─── PROLOGUE 4 · Wed 20 Aug ─── Verona · Nabucco */
+    {
+      date: '2026-08-20', dayNum: 'P4', weekday: 'Wednesday 20 August',
+      city: 'Verona — Arena di Verona',
+      hotel: 'Palazzo Ciopeta',
+      hotelMapsQuery: 'Palazzo Ciopeta Verona',
+      weatherCity: 'Verona',
+      note: 'Final day in Verona. Collect the rental car this morning — the drive begins tomorrow. Nabucco tonight at 21:00, approx. 3h 06min including one interval.',
+      stops: [
+        { time: '10:00', title: 'Alfa Romeo Junior — collect', subtitle: 'Sixt · Verona Central Station', type: 'drive', tag: 'Car', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Verona Porta Nuova Station — Sixt desk', mapsQuery: 'Sixt Verona Porta Nuova', notes: 'Confirmed with Sixt. Unlimited mileage. CDW + theft coverage included. Drop-off: Bari Airport BRI · Wed 3 Sep. Drive starts tomorrow morning — park near Palazzo Ciopeta overnight.' },
+        { time: '~18:45', title: 'Dinner · free choice', subtitle: 'Allow time before the 21:00 opera', type: 'restaurant', tag: 'Open', notes: "L'Oste Scuro kitchen opens at 18:45 on Arena performance nights. Ideal for a pre-Nabucco dinner — 10 minutes' walk to the Arena." },
+        { time: '21:00', title: 'Nabucco — Giuseppe Verdi', subtitle: 'Opera · Arena di Verona · 103rd Festival', type: 'leisure', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Bra, 37121 Verona', mapsQuery: 'Arena di Verona', notes: "Verdi's choral masterpiece — the opera that made his name at La Scala in 1842. New production by Stefano Poda (sets, costumes, lighting). The great Va, pensiero chorus — 'Fly, my thoughts, on wings of gold' — performed under open stars in a Roman amphitheatre built in the 1st century AD. Duration approx. 3h 06min including one interval." }
+      ]
+    },
+
+    /* ─── DAY 1 · Thu 21 Aug ─── Verona → Bologna */
+    {
+      date: '2026-08-21', dayNum: 1, weekday: 'Thursday 21 August',
+      city: 'Verona → Oppeano → Bologna',
+      hotel: 'Art Hotel Commercianti',
+      hotelMapsQuery: 'Art Hotel Commercianti Bologna Piazza Maggiore',
+      weatherCity: 'Bologna',
+      note: 'The drive begins. First lunch at a Michelin-starred restaurant 15 minutes south of Verona, then south to Bologna through the Po valley.',
+      stops: [
+        { time: '~11:30', title: 'Drive: Verona → Oppeano', type: 'drive', tag: 'Drive', drive: { km: 15, hrs: '~20 min', via: 'SS12' }, notes: '15 min south of Verona in the Feniletto nature reserve.' },
+        { time: '12:30', title: 'Famiglia Rana', subtitle: 'Lunch · Michelin Star · OAD 558', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Feniletto 2, 37050 Oppeano VR', mapsQuery: 'Famiglia Rana Oppeano ristorante', phone: '+390457130047', notes: 'For 2. Chef Francesco Sodano\'s contemporary cuisine rooted in the Veronese countryside — elegant family estate with remarkable seasonal menus and superb wine pairing. <em>Verify August opening before departure.</em>' },
+        { time: '~14:30', title: 'Drive: Oppeano → San Giovanni in Persiceto', type: 'drive', tag: 'Drive', drive: { km: 120, hrs: '~1h 40min', via: 'A13 / A1' }, notes: '' },
+        { time: '19:30', title: 'Antica Osteria del Mirasole', subtitle: 'Dinner · GM Selected · San Giovanni in Persiceto', type: 'restaurant', badge: 'Pending', badgeClass: 'pending', locationName: 'Via Giacomo Matteotti 17, 40017 San Giovanni in Persiceto BO', mapsQuery: 'Antica Osteria del Mirasole San Giovanni Persiceto', notes: 'A beloved Emilian institution 20 min west of Bologna — silken tortellini in brodo, gramigna, tagliatelle al ragù in a room of cheerful floral plates. <em>Verify August opening — some Bologna trattorias close in August.</em>' },
+        { time: '~21:30', title: 'Drive: → Bologna · check-in', type: 'drive', tag: 'Drive', drive: { km: 22, hrs: '~20 min', via: 'SP27' }, notes: '' },
+        { time: '~22:00', title: 'Art Hotel Commercianti', subtitle: 'Check-in · Piazza Maggiore · 1 night', type: 'hotel', badge: 'Priority', badgeClass: 'priority', locationName: "Via de' Pignattari 11, 40124 Bologna", mapsQuery: 'Art Hotel Commercianti Bologna', phone: '+390517457511', web: 'https://art-hotel-commercianti.com', notes: '<em>Not yet booked.</em> 12th-century palazzo on Piazza Maggiore — vaulted ceilings, gothic windows overlooking the Basilica di San Petronio. Book directly at art-hotel-commercianti.com' }
+      ]
+    },
+
+    /* ─── DAY 2 · Fri 22 Aug ─── Bologna → Rimini */
+    {
+      date: '2026-08-22', dayNum: 2, weekday: 'Friday 22 August',
+      city: 'Bologna → Rimini',
+      hotel: 'Grand Hotel Rimini',
+      hotelMapsQuery: 'Grand Hotel Rimini',
+      weatherCity: 'Rimini',
+      note: 'Short drive down the A14 Adriatica to Rimini. Afternoon free. Dinner at one of Italy\'s most exciting seafood restaurants on a jetty in the marina.',
+      stops: [
+        { time: 'Morning', title: 'Bologna · free morning', type: 'leisure', tag: 'Leisure', notes: 'Portico walk to the Basilica di San Luca (3.5 km of covered arcade — the longest in the world). Or explore the Quadrilatero market and its butchers, cheesemongers, and pasta shops.' },
+        { time: '~14:00', title: 'Drive: Bologna → Rimini', type: 'drive', tag: 'Drive', drive: { km: 113, hrs: '~1h 15min', via: 'A14 Adriatica' }, notes: 'The A14 runs directly along the Adriatic. First view of the sea.' },
+        { time: '19:30', title: 'Da Lucio', subtitle: 'Dinner · Michelin Star · OAD 124', type: 'restaurant', badge: 'Priority', badgeClass: 'priority', locationName: 'Viale Ortigara 80, 47921 Rimini RN', mapsQuery: 'Da Lucio ristorante Rimini marina', phone: '+390541161202', web: 'https://da-lucio.it', notes: 'For 2. At the end of a jetty in Rimini\'s private marina — chef Jacopo Ticchi ages his Adriatic fish to concentrate flavour, then grills, bakes in a wood oven, or serves raw. The long dining room feels like the prow of a ship, surrounded by water on three sides. <em>Book ahead at da-lucio.it.</em>' },
+        { time: '~22:00', title: 'Grand Hotel Rimini', subtitle: 'Check-in · 1 night', type: 'hotel', badge: 'Priority', badgeClass: 'priority', locationName: 'Parco Federico Fellini 1, Rimini', mapsQuery: 'Grand Hotel Rimini', phone: '+390541560001', web: 'https://grandhotelrimini.com', notes: '<em>Not yet booked.</em> Fellini\'s legendary seafront hotel — the great director was born and is buried in Rimini, and the hotel appears in his films. Book at grandhotelrimini.com' }
+      ]
+    },
+
+    /* ─── DAY 3 · Sat 23 Aug ─── Rimini → Gabicce Monte */
+    {
+      date: '2026-08-23', dayNum: 3, weekday: 'Saturday 23 August',
+      city: 'Rimini → Gabicce Monte',
+      hotel: 'Dalla Gioconda',
+      hotelMapsQuery: 'Dalla Gioconda Gabicce Monte',
+      weatherCity: 'Pesaro',
+      note: 'Short coastal drive south to Gabicce Monte — the headland where Emilia-Romagna meets the Marche. Dinner and overnight at Dalla Gioconda, perched at the top with a view of the entire Adriatic arc.',
+      stops: [
+        { time: '~15:00', title: 'Drive: Rimini → Gabicce Monte', type: 'drive', tag: 'Drive', drive: { km: 35, hrs: '~35 min', via: 'SS16 coastal' }, notes: 'Follow the coastal road SS16 — scenic, not fast, but the Adriatic is always in view.' },
+        { time: '~16:00', title: 'Dalla Gioconda', subtitle: 'Check-in · restaurant-hotel · 1 night', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: "Via dell'Orizzonte 2, 61011 Gabicce Monte PU", mapsQuery: 'Dalla Gioconda Gabicce Monte', phone: '+390541962295', web: 'https://dallagioconda.it', notes: 'Confirmed. At the highest point of Gabicce Monte — panoramic terrace over the entire Adriatic from the Romagna coast to Croatia.' },
+        { time: '20:30', title: 'Dalla Gioconda', subtitle: 'Dinner · Michelin Star · OAD 209 · Chef Davide Di Fabio', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: "Via dell'Orizzonte 2, Gabicce Monte", mapsQuery: 'Dalla Gioconda Gabicce Monte', phone: '+390541962295', web: 'https://dallagioconda.it', notes: 'For 2. Davide Di Fabio — trained at Osteria Francescana — creates precise, produce-led cuisine from his own kitchen garden. One of the most beautiful restaurant terraces in Italy.' }
+      ]
+    },
+
+    /* ─── DAY 4 · Sun 24 Aug ─── Gabicce Monte → Senigallia */
+    {
+      date: '2026-08-24', dayNum: 4, weekday: 'Sunday 24 August',
+      city: 'Gabicce Monte → Pesaro → Senigallia',
+      hotel: 'Visionair Suites & SPA',
+      hotelMapsQuery: 'Visionair Suites Senigallia',
+      weatherCity: 'Senigallia',
+      note: 'Two confirmed bookings today — lunch in Pesaro, dinner at a two-Michelin-starred restaurant in Senigallia. Two nights at Visionair before Uliassi tomorrow.',
+      stops: [
+        { time: '~11:00', title: 'Drive: Gabicce Monte → Pesaro', type: 'drive', tag: 'Drive', drive: { km: 15, hrs: '~15 min', via: 'SS16' }, notes: '' },
+        { time: '12:30', title: 'Nostrano Pesaro', subtitle: 'Lunch · Michelin Selected', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Pesaro PU', mapsQuery: 'Nostrano ristorante Pesaro', notes: 'For 2. Confirmed.' },
+        { time: '~14:30', title: 'Drive: Pesaro → Senigallia', type: 'drive', tag: 'Drive', drive: { km: 25, hrs: '~25 min', via: 'SS16' }, notes: '' },
+        { time: '~15:00', title: 'Visionair Suites & SPA', subtitle: 'Check-in · 2 nights · Senigallia', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazzale Nino Bixio, 60019 Senigallia AN', mapsQuery: 'Visionair Suites Senigallia', notes: 'Confirmed. Luxury spa and beachfront terrace. 2 nights — Uliassi dinner tomorrow (Tue 25 Aug).' },
+        { time: '20:45', title: 'Madonnina del Pescatore', subtitle: 'Dinner · ⭐⭐ Two Michelin Stars · Chef Moreno Cedroni', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Lungomare Italia 11, Senigallia Marzocca AN', mapsQuery: 'Madonnina del Pescatore Senigallia Cedroni', notes: 'For 2. Confirmed. One of the great Italian fish restaurants — Moreno Cedroni\'s creative, technically precise Adriatic seafood in a celebrated beachside setting at Marzocca di Senigallia.' }
+      ]
+    },
+
+    /* ─── DAY 5 · Mon 25 Aug ─── Senigallia · Uliassi */
+    {
+      date: '2026-08-25', dayNum: 5, weekday: 'Monday 25 August',
+      city: 'Senigallia — no driving',
+      hotel: 'Visionair Suites & SPA',
+      hotelMapsQuery: 'Visionair Suites Senigallia',
+      weatherCity: 'Senigallia',
+      note: 'A day of rest on the Spiaggia di Velluto before the most anticipated table of the trip. Arrive at Uliassi unhurried.',
+      stops: [
+        { time: 'Morning', title: 'Senigallia · rest day', subtitle: 'Spiaggia di Velluto · spa · old town', type: 'leisure', tag: 'Leisure', notes: 'The Spiaggia di Velluto — "velvet beach" — is Senigallia\'s famous fine-sand shore. Afternoon at the Visionair spa before dinner.' },
+        { time: '13:00', title: 'Alla Lanterna', subtitle: 'Lunch · GM Selected · Fano', type: 'restaurant', badge: 'Pending', badgeClass: 'pending', locationName: 'SS Adriatica Sud 78, 61032 Fano PU', mapsQuery: 'Alla Lanterna ristorante Fano', notes: 'For 2. Pending. A large, elegant beach-style restaurant noted as a local brodetto reference. 25 min from Senigallia — a light lunch before the evening\'s three-star dinner.' },
+        { time: '19:45', title: 'Uliassi', subtitle: 'Dinner · ⭐⭐⭐ Three Michelin Stars · OAD #12 · B50 #50', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Banchina di Levante 6, 60019 Senigallia AN', mapsQuery: 'Uliassi ristorante Senigallia', phone: '+390716564', web: 'https://uliassi.it', notes: 'For 2. Confirmed. Hidden among the beach clubs of Senigallia\'s seafront, Mauro Uliassi\'s three-star restaurant is one of the great rooms of Italian gastronomy. The Adriatic is the soul of every menu — fish, shellfish, and sea vegetables transformed by 30 years of mastery. The smoked spaghetti with clams is one of Italy\'s most iconic plates.' }
+      ]
+    },
+
+    /* ─── DAY 6 · Tue 26 Aug ─── Senigallia → Porto d\'Ascoli */
+    {
+      date: '2026-08-26', dayNum: 6, weekday: 'Tuesday 26 August',
+      city: "Senigallia → Porto d'Ascoli",
+      hotel: 'Hotel Marconi',
+      hotelMapsQuery: "Hotel Marconi San Benedetto del Tronto",
+      weatherCity: 'Pescara',
+      note: "Long drive south down the Adriatic autostrada. Dinner at chef Palestini's osteria in Porto d'Ascoli — the restaurant that left a very strong desire to return.",
+      stops: [
+        { time: '~14:00', title: "Drive: Senigallia → Porto d'Ascoli", type: 'drive', tag: 'Drive', drive: { km: 148, hrs: '~1h 50min', via: 'A14' }, notes: 'Straight down the A14 Adriatica. The coast becomes more rugged south of Pesaro.' },
+        { time: '~16:00', title: 'Hotel Marconi', subtitle: 'Check-in · San Benedetto del Tronto', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Maffei 114, 63039 San Benedetto del Tronto AP', mapsQuery: 'Hotel Marconi San Benedetto del Tronto', phone: '+390735581454', notes: "Confirmed. Seafront hotel in San Benedetto del Tronto — 10 min from Porto d'Ascoli and Osteria Caserma Guelfa." },
+        { time: 'Evening', title: 'Osteria Caserma Guelfa', subtitle: "Dinner · Porto d'Ascoli · Chef Palestini", type: 'restaurant', badge: 'walkin', badgeClass: 'walkin', locationName: "Via Guelfa Caserma 5, 63074 Porto d'Ascoli AP", mapsQuery: "Osteria Caserma Guelfa Porto d'Ascoli", notes: "Chef Palestini — who cooked brodetto and a celebrated sea bass crudo in a temporary beachfront space while the osteria was under repair — left a very strong desire to return. The permanent space is now fully restored. Call ahead to verify Wednesday opening." }
+      ]
+    },
+
+    /* ─── DAY 7 · Wed 27 Aug ─── Porto d\'Ascoli → Vasto → Termoli */
+    {
+      date: '2026-08-27', dayNum: 7, weekday: 'Wednesday 27 August',
+      city: "Porto d'Ascoli → Vasto → Termoli",
+      hotel: 'Residence Sveva',
+      hotelMapsQuery: 'Residence Sveva Termoli',
+      weatherCity: 'Pescara',
+      note: 'Two brodetto stops — Vasto for lunch, Termoli for dinner. The A14 becomes more dramatic south of Pescara as the Apennines push closer to the sea.',
+      stops: [
+        { time: '~11:00', title: "Drive: Porto d'Ascoli → Vasto", type: 'drive', tag: 'Drive', drive: { km: 132, hrs: '~1h 45min', via: 'A14' }, notes: 'The Vasto exit off the A14. Da Ferri is in the industrial port district of Genova-Rulli — follow signs for the porto.' },
+        { time: '13:00', title: 'Ristorante Da Ferri', subtitle: 'Lunch · Brodetto alla Vastese · Vasto', type: 'restaurant', badge: 'walkin', badgeClass: 'walkin', locationName: 'Via Osca 82, 66054 Vasto CH', mapsQuery: 'Ristorante Da Ferri Vasto', notes: 'Very brodetto-focused — the Vastese version uses tomato, distinct from the other Adriatic variations. Packed at weekday lunch in an atmospheric industrial-port setting. Clearly one of the most important fish stops on the coast. Verify Thursday lunch opening.' },
+        { time: '~15:00', title: 'Drive: Vasto → Termoli', type: 'drive', tag: 'Drive', drive: { km: 38, hrs: '~25 min', via: 'A14' }, notes: 'Termoli is just across the Molise border — the most dramatic old-town promontory on the Adriatic.' },
+        { time: '~15:30', title: 'Residence Sveva', subtitle: 'Check-in · Termoli medieval borgo', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Fratelli Brigida, 86039 Termoli CB', mapsQuery: 'Residence Sveva Termoli', phone: '+390875705703', notes: 'Confirmed. In the heart of Termoli\'s medieval borgo — steps from Osteria Dentro le Mura and the Norman-Swabian castle.' },
+        { time: 'Evening', title: 'Osteria Dentro le Mura', subtitle: 'Dinner · Termoli · Brodetto reference', type: 'restaurant', badge: 'walkin', badgeClass: 'walkin', locationName: 'Via Federico II di Svevia 3, 86039 Termoli CB', mapsQuery: 'Osteria Dentro le Mura Termoli', phone: '+390875705951', notes: 'Recommended by Massimo Di Cintio as the local brodetto reference in Termoli — beautiful old-town setting inside the medieval walls. <em>⚠ Was closed on a previous visit — call ahead to confirm.</em>' }
+      ]
+    },
+
+    /* ─── DAY 8 · Thu 28 Aug ─── Termoli → Peschici → Vieste */
+    {
+      date: '2026-08-28', dayNum: 8, weekday: 'Thursday 28 August',
+      city: 'Termoli → Gargano Peninsula',
+      hotel: 'Tra Cielo e Mare',
+      hotelMapsQuery: 'Tra Cielo e Mare Vieste',
+      weatherCity: 'Foggia',
+      note: 'Into the Gargano — the limestone spur that juts into the Adriatic. Lunch on a historic trabucco over the sea, dinner carved into the rock of Vieste.',
+      stops: [
+        { time: '~10:00', title: 'Drive: Termoli → Peschici', type: 'drive', tag: 'Drive', drive: { km: 130, hrs: '~1h 45min', via: 'SS89' }, notes: 'The SS89 enters the Gargano at Rodi Garganico and climbs through pine forest and white limestone — one of the most beautiful coastal drives in Italy.' },
+        { time: '12:30', title: 'Al Trabucco da Mimì', subtitle: 'Lunch · Historic trabucco · Peschici', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Località Punta San Nicola, 71010 Peschici FG', mapsQuery: 'Al Trabucco da Mimi Peschici', web: 'https://trabuccodamimi.it', notes: 'For 2. Confirmed. <em>Booking ref: B9KJPXMM.</em> An iconic seafood restaurant built on a historic trabucco — a traditional wooden fishing machine cantilevered over the sea. Refined but deeply rooted cuisine and an extraordinary wine list. Rooms on-site.' },
+        { time: '~14:30', title: 'Drive: Peschici → Vieste', type: 'drive', tag: 'Drive', drive: { km: 25, hrs: '~30 min', via: 'SP52' }, notes: 'The SP52 hugs the cliff above the Adriatic — extraordinary scenery.' },
+        { time: '~15:00', title: 'Tra Cielo e Mare', subtitle: 'Check-in · Vieste · 1 night', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Vittorio Emanuele 20, 71019 Vieste FG', mapsQuery: 'Tra Cielo e Mare Vieste', phone: '+393508286423', web: 'https://tracieloemarevieste.com', notes: 'Confirmed.' },
+        { time: '20:15', title: 'la Ripa', subtitle: 'Dinner · De Librije-trained · Rock-carved restaurant · Vieste', type: 'restaurant', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Nicolò Cimaglia 16, 71019 Vieste FG', mapsQuery: 'la Ripa ristorante Vieste', notes: 'For 2. Confirmed. <em>Booking ref: BHC4LQKY.</em> A high-end restaurant carved into the rock of Vieste\'s historic centre — run by two brothers trained at De Librije and other starred kitchens. Modern, characterful cuisine; stone walls and intimate atmosphere.' }
+      ]
+    },
+
+    /* ─── DAY 9 · Fri 29 Aug ─── Vieste → Matera */
+    {
+      date: '2026-08-29', dayNum: 9, weekday: 'Friday 29 August',
+      city: 'Vieste → Matera',
+      hotel: 'Aquatio Cave Luxury Hotel & Spa',
+      hotelMapsQuery: 'Aquatio Cave Luxury Hotel Matera',
+      weatherCity: 'Matera',
+      note: 'The longest single leg — 3h 30min from the tip of the Gargano to the cave city of Matera. Pier takes over from tomorrow. Four nights in Matera, three different hotels.',
+      stops: [
+        { time: '~09:30', title: 'Drive: Vieste → Matera', type: 'drive', tag: 'Drive', drive: { km: 240, hrs: '~3h 30min', via: 'SS89 / A16 / SS96' }, notes: 'Exit the Gargano via SS89 south, join the A16 (Napoli–Bari autostrada) at Foggia, then SS96 to Matera. Last 30 km through the Murge plateau is lunar and beautiful.' },
+        { time: '~13:00', title: 'Arrival · Matera · Sassi district', subtitle: 'First views of the cave city', type: 'leisure', tag: 'Arrival', notes: 'The first view of Matera\'s Sassi from the belvedere above the ravine is one of the great travel moments in Italy — a 3,000-year-old city of cave dwellings carved into the limestone gorge.' },
+        { time: '~14:00', title: 'Aquatio Cave Luxury Hotel & Spa', subtitle: 'Check-in · 1 night · Sassi di Matera', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Conche, 75100 Matera MT', mapsQuery: 'Aquatio Cave Luxury Hotel Matera', phone: '+44 20 3027 6614', web: 'https://aquatiohotel.com', notes: 'Confirmed. <em>Ref: 9093288937874.</em> Cave hotel in the Sasso Caveoso — spa built into the rock, rooms with ravine views.' },
+        { time: 'Evening', title: 'Matera · free evening', subtitle: 'Walk the Sassi by night', type: 'leisure', tag: 'Leisure', notes: 'The Sassi illuminated at night is extraordinary — walk the cave-lined lanes of Sasso Barisano and Sasso Caveoso without a plan. Dinner at will in the Sassi.' }
+      ]
+    },
+
+    /* ─── DAY 10 · Sat 30 Aug ─── Matera / Bari — Pier driving */
+    {
+      date: '2026-08-30', dayNum: 10, weekday: 'Saturday 30 August',
+      city: 'Matera · Bari — Pier driving',
+      hotel: 'Sextantio Le Grotte della Civita',
+      hotelMapsQuery: 'Sextantio Le Grotte della Civita Matera',
+      weatherCity: 'Bari',
+      note: 'Pier Vernole takes the wheel. Old Bari in the morning — private access to houses and workshops, fresh pasta made by the nonnas. Yacht Club for lunch. Vitantonio Lombardo for dinner.',
+      stops: [
+        { time: 'Morning', title: 'Bari vecchia · Private tour with Pier', subtitle: 'Old town · pasta-making · focaccia · panzerotti', type: 'leisure', badge: 'Host', badgeClass: 'host', locationName: 'Bari Vecchia, Bari BA', mapsQuery: 'Bari Vecchia centro storico', notes: 'Pierpaolo Vernole — local expert with connections throughout Bari — guides through the old town, providing access to private houses, backstores, and artisan workshops. Tasting of real focaccia barese, popizze, and taralli. Pasta made by the real old women of old Bari.' },
+        { time: '12:30', title: 'Yacht Club Bari', subtitle: 'Lunch · Exclusive members\' club · Assassina pasta', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Bari BA', mapsQuery: 'Yacht Club Bari', notes: 'Via Pierpaolo. The most exclusive private club in the region — located inside a historic theatre, members are politicians, bankers, and leading figures. A completely bespoke menu (not the standard member\'s menu) with fish selected fresh that morning. The finest spaghetti all\'assassina available — the genuine article.' },
+        { time: 'Afternoon', title: 'Matera · stroll the Sassi', subtitle: 'Return from Bari', type: 'leisure', tag: 'Leisure', notes: 'Pier drops back in Matera. Walk the Sassi in the lower afternoon heat — the light on the limestone is extraordinary from 16:00 onwards.' },
+        { time: '~16:00', title: 'Sextantio Le Grotte della Civita', subtitle: 'Check-in · 1 night · Sasso Caveoso', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Via Civita 28, 75100 Matera MT', mapsQuery: 'Sextantio Le Grotte della Civita Matera', phone: '+390835332744', web: 'https://sextantio.it', notes: 'Confirmed. <em>Ref: 9093289030888.</em> 18 caves restored under David Chipperfield\'s direction. Candles instead of lamps; no televisions by design. Breakfast in a medieval church. The most atmospheric hotel in Italy — only 18 rooms, book early.' },
+        { time: '20:00', title: 'Vitantonio Lombardo', subtitle: 'Dinner · Michelin Star · Cave restaurant · Sassi di Matera', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Via Madonna delle Virtù 13, 75100 Matera MT', mapsQuery: 'Vitantonio Lombardo ristorante Matera', phone: '+390835335475', web: 'https://vlristorante.it', notes: 'Via Pierpaolo — personal connection, best service guaranteed. For 2. Tasting menu only: Heart, Head, Gut. Chef Vitantonio Lombardo\'s cuisine is rooted in Lucanian tradition, interpreted with emotional intelligence in an old cave in the Sassi. A post-dinner walk through the illuminated ravine is unmissable.' }
+      ]
+    },
+
+    /* ─── DAY 11 · Sun 31 Aug ─── Matera — Pier driving */
+    {
+      date: '2026-08-31', dayNum: 11, weekday: 'Sunday 31 August',
+      city: 'Basilicata Winery · Alberobello — Pier driving',
+      hotel: 'Palazzo Gattini Luxury Hotel',
+      hotelMapsQuery: 'Palazzo Gattini Matera',
+      weatherCity: 'Matera',
+      note: 'Pier drives again. A private winery tour in Basilicata — the same producer who hosts Mærge and who Pier gifted to Doujin and Sugita. Alberobello in the afternoon. La Lopa for dinner.',
+      stops: [
+        { time: 'Morning', title: 'Private tour · Basilicata wine producer', subtitle: 'Vineyard · tasting · fresh cheese · aperitivo + lunch', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Basilicata (location TBC with Pier)', mapsQuery: 'Matera Basilicata wineyards', notes: 'Via Pierpaolo. Visit the main wine producer in Basilicata — walk the vineyards, taste wines with fresh cheeses, and stay for an aperitivo and full lunch with wine pairings. These are the same wines Pier gifted to Doujin, Sugita, and others — and the reason Mærge is coming to the region.' },
+        { time: 'Afternoon', title: 'Alberobello', subtitle: 'The trulli village · UNESCO World Heritage', type: 'leisure', tag: 'Leisure', locationName: 'Alberobello, BA', mapsQuery: 'Alberobello trulli UNESCO', notes: 'The iconic trulli — circular dry-stone houses with conical roofs — are found only in this corner of Puglia. Officially twinned with Shirakawa-gō in Japan. The Rione Monti district has over 1,000 trulli.' },
+        { time: 'Late afternoon', title: "Pier's villa · aperitivo", subtitle: 'Private residential village · pool', type: 'leisure', badge: 'Host', badgeClass: 'host', notes: 'Pierpaolo welcomes the group to his villa in a private residential village — pool, beach access, and a genuine Bari home. Panzerotti if the mood takes it.' },
+        { time: '~16:30', title: 'Palazzo Gattini Luxury Hotel', subtitle: 'Check-in · 3 nights · Piazza Duomo · Matera', type: 'hotel', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Piazza Duomo 13/14, 75100 Matera MT', mapsQuery: 'Palazzo Gattini Matera', phone: '+390835334358', web: 'https://vretreats.com/palazzo-gattini', notes: 'Confirmed. <em>Ref: 12889RKCGB0000000290.</em> 3 nights (Sun 31 Aug – Wed 3 Sep). Overlooking Matera\'s cathedral square — the most prestigious address in the city.' },
+        { time: 'Evening', title: 'La Lopa', subtitle: 'Dinner · Matera · Via Pierpaolo', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Matera MT', mapsQuery: 'La Lopa ristorante Matera', notes: 'Via Pierpaolo — personal connection to the owner. Pier notes it\'s exceptional for both food and location in the Sassi. "I don\'t want to bother you for dinner if you want to be alone — I will provide the best service anyway."' }
+      ]
+    },
+
+    /* ─── DAY 12 · Mon 1 Sep ─── Castellana · Locorotondo · Matera */
+    {
+      date: '2026-09-01', dayNum: 12, weekday: 'Monday 1 September',
+      city: 'Castellana Grotte · Locorotondo · Matera',
+      hotel: 'Palazzo Gattini Luxury Hotel',
+      hotelMapsQuery: 'Palazzo Gattini Matera',
+      weatherCity: 'Bari',
+      note: 'Self-drive day — Pier is not available but has arranged the restaurants. Castellana Grotte caves in the morning, Botteghe Antiche lunch, Locorotondo and Martina Franca in the afternoon.',
+      stops: [
+        { time: '~09:30', title: 'Drive: Matera → Castellana Grotte', type: 'drive', tag: 'Drive', drive: { km: 70, hrs: '~1h', via: 'SS96 / SP240' }, notes: '' },
+        { time: '~10:30', title: 'Castellana Grotte · cave tour', subtitle: 'Spectacular limestone cave system', type: 'leisure', tag: 'Visit', locationName: 'Castellana Grotte, BA', mapsQuery: 'Grotte di Castellana', notes: 'Among the most spectacular cave systems in Italy — 3 km of underground passages and chambers, including the extraordinary White Cave (Grotta Bianca). Book the full tour (2h) rather than the short version.' },
+        { time: '~13:00', title: 'Drive: Castellana → Putignano', type: 'drive', tag: 'Drive', drive: { km: 15, hrs: '~15 min', via: 'SP119' }, notes: '' },
+        { time: '13:00', title: 'Osteria Botteghe Antiche', subtitle: 'Lunch · Via Pierpaolo · Cucina povera · Putignano', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Piazza Plebiscito 8, 70017 Putignano BA', mapsQuery: 'Osteria Botteghe Antiche Putignano', notes: 'Via Pierpaolo — personal connection, special treatment arranged. An emblematic cucina povera house in Putignano — classic, honest Apulian cooking. Highlighted as the traditional spot to focus on in this area.' },
+        { time: '~15:00', title: 'Drive: Putignano → Locorotondo / Martina Franca', type: 'drive', tag: 'Drive', drive: { km: 25, hrs: '~25 min', via: 'SP17' }, notes: '' },
+        { time: 'Afternoon', title: 'Locorotondo · Martina Franca', subtitle: 'Two of the Valle d\'Itria\'s finest hilltop towns', type: 'leisure', tag: 'Visit', locationName: 'Locorotondo / Martina Franca, TA', mapsQuery: 'Locorotondo Puglia centro storico', notes: 'Locorotondo: circular white-washed town above the Valle d\'Itria. Martina Franca: baroque palaces and the finest architraved doorways in Puglia.' },
+        { time: '~18:30', title: 'Drive: Martina Franca → Matera', type: 'drive', tag: 'Drive', drive: { km: 90, hrs: '~1h 15min', via: 'SS172 / SS7' }, notes: '' },
+        { time: '20:00', title: 'U Curdunn', subtitle: 'Dinner · Via Pierpaolo · Matera', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Matera MT', mapsQuery: 'U Curdunn ristorante Matera', notes: 'Via Pierpaolo — connected. Dinner in Matera.' }
+      ]
+    },
+
+    /* ─── DAY 13 · Tue 2 Sep ─── Ostuni · Polignano · Matera */
+    {
+      date: '2026-09-02', dayNum: 13, weekday: 'Tuesday 2 September',
+      city: 'Ostuni · Polignano a Mare',
+      hotel: 'Palazzo Gattini Luxury Hotel',
+      hotelMapsQuery: 'Palazzo Gattini Matera',
+      weatherCity: 'Brindisi',
+      note: 'Last full day — two of Puglia\'s great coastal destinations. Ostuni the White City on its hill, then Polignano a Mare perched dramatically above the sea.',
+      stops: [
+        { time: '~09:00', title: 'Drive: Matera → Ostuni', type: 'drive', tag: 'Drive', drive: { km: 95, hrs: '~1h 15min', via: 'SS7' }, notes: '' },
+        { time: '~10:30', title: 'Ostuni · La Città Bianca', subtitle: 'The White City · hilltop old town', type: 'leisure', tag: 'Visit', locationName: 'Ostuni, BR', mapsQuery: 'Ostuni centro storico Puglia', notes: 'Ostuni\'s medieval hilltop centre is a maze of whitewashed lanes and terraces with views across the Adriatic plain to the sea. The cathedral (15th c.) and the old city walls are unmissable.' },
+        { time: '13:00', title: 'Osteria del Tempo Perso', subtitle: 'Lunch · Via Pierpaolo · Ostuni', type: 'restaurant', badge: 'Host', badgeClass: 'host', locationName: 'Ostuni BR', mapsQuery: 'Osteria del Tempo Perso Ostuni', notes: 'Via Pierpaolo — arranged with personal connection. Lunch in Ostuni.' },
+        { time: '~15:00', title: 'Drive: Ostuni → Polignano a Mare', type: 'drive', tag: 'Drive', drive: { km: 60, hrs: '~50 min', via: 'SP17 / SS16' }, notes: '' },
+        { time: 'Afternoon', title: 'Polignano a Mare', subtitle: 'Sea cliffs · lama belvedere · historic centre', type: 'leisure', tag: 'Visit', locationName: 'Polignano a Mare, BA', mapsQuery: 'Polignano a Mare centro storico', notes: 'The old town is built on a limestone promontory above dramatic sea-carved grottoes — one of the most photographed spots in Puglia. The main belvedere overlooks the beach and the Adriatic.' },
+        { time: '~17:30', title: 'Drive: Polignano → Matera', type: 'drive', tag: 'Drive', drive: { km: 90, hrs: '~1h 10min', via: 'SS16 / SS96' }, notes: '' },
+        { time: 'Evening', title: 'TBC fish restaurant', subtitle: 'Final evening dinner · Via Pierpaolo', type: 'restaurant', badge: 'Pending', badgeClass: 'pending', locationName: 'Matera area (TBC)', mapsQuery: 'Matera ristorante pesce', notes: 'Pierpaolo is still making calls to find the right connection for a fish-based final dinner. Location and restaurant name TBC.' }
+      ]
+    },
+
+    /* ─── DAY 14 · Wed 3 Sep ─── Departure */
+    {
+      date: '2026-09-03', dayNum: 14, weekday: 'Wednesday 3 September',
+      city: 'Matera → Bari → Copenhagen',
+      hotel: '—',
+      weatherCity: 'Bari',
+      note: 'Departure day. Checkout Palazzo Gattini, drive to Bari Airport, drop the car, and fly SAS to Copenhagen. Thank Pier.',
+      stops: [
+        { time: 'Morning', title: 'Palazzo Gattini · checkout', type: 'hotel', tag: 'Checkout', notes: 'Last morning in the Sassi. The cathedral square at dawn is the final image.' },
+        { time: '~09:30', title: 'Drive: Matera → Bari Airport BRI', type: 'drive', tag: 'Drive', drive: { km: 65, hrs: '~1h', via: 'SS99' }, notes: 'Allow 1h for the drive. Drop the Alfa Romeo at the Sixt desk, BRI terminal. Check-in recommended by 10:30.' },
+        { time: '10:00', title: 'Drop car · Sixt · Bari Airport BRI', subtitle: 'Alfa Romeo Junior return', type: 'drive', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Bari Karol Wojtyla Airport (BRI)', mapsQuery: 'Bari Airport BRI Sixt car rental', notes: 'Confirmed with Sixt. Drop by 10:00.' },
+        { time: '12:05', title: 'SAS SK2518 — Bari → Copenhagen', subtitle: 'BRI → CPH · Business class', type: 'flight', tag: 'Flight', badge: 'Confirmed', badgeClass: 'confirmed', locationName: 'Bari Karol Wojtyla Airport (BRI)', mapsQuery: 'Bari Airport BRI departures', notes: 'Departure 12:05 · Arrival Copenhagen CPH 14:35 · 2h 30min · Business class. Confirmed.' }
+      ]
+    }
+
+  ] // end days
+}; // end TRIP
+
+/* ─── State ─────────────────────────────────────────────────────────── */
+let weatherCache = {};
+let activeTab = 'itinerary';
+
+/* ─── Helpers ───────────────────────────────────────────────────────── */
+function $(sel, root) { return (root || document).querySelector(sel); }
+function $$(sel, root) { return Array.from((root || document).querySelectorAll(sel)); }
+
+function todayInTZ() {
+  const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: TIMEZONE, year: 'numeric', month: '2-digit', day: '2-digit' });
+  return fmt.format(new Date());
+}
+
+function toast(msg) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove('show'), 1900);
+}
+
+function copyText(text) {
+  try { navigator.clipboard.writeText(text).then(() => toast('Copied ✓'), fb); } catch(e) { fb(); }
+  function fb() {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('Copied ✓'); } catch(e) { toast('Could not copy'); }
+    document.body.removeChild(ta);
+  }
+}
+
+function mapsLink(q) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); }
+function navLink(q)  { return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q) + '&travelmode=driving'; }
+
+/* ─── Clock ─────────────────────────────────────────────────────────── */
+function updateClock() {
+  const t = new Intl.DateTimeFormat('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date());
+  const clock = $('#cest-clock');
+  if (clock) clock.textContent = t;
+  const today = todayInTZ();
+  const lbl = $('#trip-day-label');
+  if (!lbl) return;
+  if (today < TRIP.startDate) {
+    const days = Math.ceil((new Date(TRIP.startDate) - new Date(today)) / 86400000);
+    lbl.textContent = days === 1 ? 'T-1 day · CEST' : `T-${days} days · CEST`;
+  } else if (today > TRIP.endDate) {
+    lbl.textContent = 'Trip complete · CEST';
+  } else {
+    const idx = Math.floor((new Date(today) - new Date(TRIP.startDate)) / 86400000) + 1;
+    lbl.textContent = `Day ${idx} of ${TRIP.days.length} · CEST`;
+  }
+}
+
+/* ─── Weather ───────────────────────────────────────────────────────── */
+const CITY_COORDS = {
+  Bolzano:   { lat: 46.4986, lon: 11.3548 },
+  Verona:    { lat: 45.4384, lon: 10.9916 },
+  Bologna:   { lat: 44.4949, lon: 11.3426 },
+  Rimini:    { lat: 44.0678, lon: 12.5695 },
+  Pesaro:    { lat: 43.9111, lon: 12.9135 },
+  Senigallia:{ lat: 43.7151, lon: 13.2194 },
+  Pescara:   { lat: 42.4546, lon: 14.2130 },
+  Foggia:    { lat: 41.4621, lon: 15.5466 },
+  Matera:    { lat: 40.6664, lon: 16.6043 },
+  Bari:      { lat: 41.1177, lon: 16.8719 },
+  Brindisi:  { lat: 40.6328, lon: 17.9418 }
+};
+
+function wmoToEmoji(c) {
+  if (c===0) return {icon:'☀️',desc:'Clear'};
+  if (c<=2)  return {icon:'⛅',desc:'Partly cloudy'};
+  if (c===3) return {icon:'☁️',desc:'Overcast'};
+  if (c>=45&&c<=48) return {icon:'🌫️',desc:'Foggy'};
+  if (c>=51&&c<=57) return {icon:'🌦️',desc:'Drizzle'};
+  if (c>=61&&c<=67) return {icon:'🌧️',desc:'Rain'};
+  if (c>=80&&c<=82) return {icon:'🌦️',desc:'Showers'};
+  if (c>=95) return {icon:'⛈️',desc:'Storms'};
+  return {icon:'🌤️',desc:'Mixed'};
+}
+
+async function fetchWeather() {
+  const results = {};
+  await Promise.allSettled(Object.entries(CITY_COORDS).map(async ([city, {lat,lon}]) => {
+    try {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode&timezone=Europe%2FRome&forecast_days=16`;
+      const data = await (await fetch(url)).json();
+      data.daily.time.forEach((date,i) => {
+        results[`${city}-${date}`] = { max: Math.round(data.daily.temperature_2m_max[i]), min: Math.round(data.daily.temperature_2m_min[i]), rain: data.daily.precipitation_probability_max[i]??0, code: data.daily.weathercode[i] };
+      });
+    } catch(e) {}
+  }));
+  return results;
+}
+
+function weatherCellHTML(day) {
+  const w = weatherCache[`${day.weatherCity}-${day.date}`];
+  if (!w) return `<span class="val" style="color:var(--ink-3)">Forecast within 16 days of travel</span>`;
+  const {icon,desc} = wmoToEmoji(w.code);
+  return `<span class="val"><span>${icon}</span> ${w.min}° / ${w.max}°C · ${desc} · ${w.rain}% rain</span>`;
+}
+
+/* ─── Render Itinerary ──────────────────────────────────────────────── */
+function renderItinerary() {
+  const root = $('#tab-itinerary');
+  const today = todayInTZ();
+  let html = '';
+
+  html += `
+    <div class="hero">
+      <div class="hero-eyebrow">Private Travel · 2026</div>
+      <h1 class="hero-title">Italy <em>East Coast</em></h1>
+      <div class="hero-sub">Adriatic · Gargano · Puglia · Matera</div>
+      <div class="hero-rule"></div>
+      <div class="hero-meta">
+        <span>🗓 <strong>17 Aug – 3 Sep 2026</strong></span>
+        <span>🚂 <strong>SZG → VRN</strong></span>
+        <span>✈️ <strong>BRI → CPH</strong></span>
+        <span>🏨 <strong>12 hotels</strong></span>
+        <span>🍽 <strong>23 restaurants</strong></span>
+        <span>🌊 <strong>~1,800 km</strong></span>
+      </div>
+      <div class="hero-name">Gerhard Huber</div>
+      <div class="hero-name-sub">A Personal Journey · Happy Camper Ltd.</div>
+    </div>
+  `;
+
+  html += `<div class="hotels-wrap"><div class="section-label">Hotels at a glance</div><div class="hotels-grid">`;
+  TRIP.hotels.forEach((h,i) => {
+    html += `<div class="hotel-card"><div class="hotel-num">${i+1}</div><div class="hotel-info"><div class="hotel-name">${h.name}</div><div class="hotel-meta">${h.location} · ${h.nights}${h.ref && h.ref!=='—' && h.ref!=='Not yet booked' && h.ref!=='Confirmed' ? ' · Ref: '+h.ref : ''}</div></div><a class="hotel-link" href="${mapsLink(h.mapsQuery)}" target="_blank" rel="noopener">↗</a></div>`;
+  });
+  html += `</div></div>`;
+
+  html += `<div class="section-label">Day by day</div><div id="days-container">`;
+  TRIP.days.forEach((d,di) => {
+    const isCurrent = d.date === today;
+    const isPast = d.date < today;
+    const cls = ['day-card'];
+    if (isCurrent) cls.push('is-current','expanded');
+    if (isPast) cls.push('is-past');
+    if (di===0 && !isCurrent && !isPast) cls.push('expanded');
+    html += `
+      <article class="${cls.join(' ')}" data-date="${d.date}">
+        <button class="day-header" aria-expanded="${cls.includes('expanded')}" onclick="toggleDay(this)">
+          <div class="day-num">${d.dayNum}</div>
+          <div class="day-meta">
+            <div class="day-date">${d.weekday}</div>
+            <div class="day-title">${d.city}</div>
+          </div>
+          ${isCurrent ? '<span class="day-city-badge">Today</span>' : ''}
+          <span class="day-toggle">⌃</span>
+        </button>
+        <div class="day-body">
+          <div class="day-strip">
+            <div class="strip-item"><span class="label">Hotel</span>${d.hotel==='—'?'<span class="val" style="color:var(--ink-3)">Departure</span>':`<span class="val">${d.hotel}</span>`}</div>
+            <div class="strip-item" data-weather data-key="${d.weatherCity}-${d.date}"><span class="label">Weather</span>${weatherCellHTML(d)}</div>
+          </div>
+          ${d.note?`<div class="day-note">${d.note}</div>`:''}
+          <div class="stops">${d.stops.map(stopHTML).join('')}</div>
+        </div>
+      </article>`;
+  });
+  html += `</div>`;
+  root.innerHTML = html;
+}
+
+function stopHTML(s) {
+  const tags = [];
+  if (s.tag) tags.push(`<span class="stop-type-tag">${s.tag}</span>`);
+  if (s.badge) tags.push(`<span class="badge ${s.badgeClass||''}">${s.badge}</span>`);
+  const acts = [];
+  if (s.mapsQuery) { acts.push(`<a class="act-btn" href="${mapsLink(s.mapsQuery)}" target="_blank" rel="noopener">📍 Map</a>`); acts.push(`<a class="act-btn primary" href="${navLink(s.mapsQuery)}" target="_blank" rel="noopener">🧭 Navigate</a>`); }
+  if (s.locationName) acts.push(`<button class="act-btn" onclick="copyText(${JSON.stringify(s.locationName).replace(/"/g,'&quot;')})">📋 Copy</button>`);
+  if (s.phone) acts.push(`<a class="act-btn tel" href="tel:${s.phone.replace(/\s+/g,'')}">📞 Call</a>`);
+  if (s.web)   acts.push(`<a class="act-btn" href="${s.web}" target="_blank" rel="noopener">🌐 Site</a>`);
+  let drive = '';
+  if (s.drive) drive = `<div class="drive-card"><span class="miles">${s.drive.km} km</span><span>${s.drive.hrs}${s.drive.via?' · '+s.drive.via:''}</span></div>`;
+  return `<div class="stop" data-type="${s.type||'leisure'}">
+    <div class="stop-header"><span class="stop-time">${s.time||''}</span>${tags.join('')}</div>
+    <div class="stop-title">${s.title}</div>
+    ${s.subtitle?`<div class="stop-subtitle">${s.subtitle}</div>`:''}
+    ${drive}
+    ${s.locationName?`<div class="stop-loc">${s.locationName}</div>`:''}
+    ${s.notes?`<div class="stop-notes">${s.notes}</div>`:''}
+    ${acts.length?`<div class="stop-actions">${acts.join('')}</div>`:''}
+  </div>`;
+}
+
+function toggleDay(btn) {
+  const card = btn.closest('.day-card');
+  const open = card.classList.toggle('expanded');
+  btn.setAttribute('aria-expanded', open);
+}
+
+/* ─── Render Utilities ──────────────────────────────────────────────── */
+function renderUtilities() {
+  $('#tab-utilities').innerHTML = `
+
+    <div class="util-card">
+      <h2 class="util-title">Currency</h2>
+      <div class="util-sub">EUR ↔ GBP ↔ JPY</div>
+      <div class="fx-rate-row"><span>Rates: <strong>£${FX_GBP_PER_EUR}</strong> / <strong>¥${FX_JPY_PER_EUR}</strong> per €1</span></div>
+      <div class="fx-row"><label for="fx-eur">EUR</label><input id="fx-eur" type="number" inputmode="decimal" placeholder="100" oninput="convertFX('eur')"></div>
+      <div class="fx-row"><label for="fx-gbp">GBP</label><input id="fx-gbp" type="number" inputmode="decimal" placeholder="—" oninput="convertFX('gbp')"></div>
+      <div class="fx-row"><label for="fx-jpy">JPY</label><input id="fx-jpy" type="number" inputmode="decimal" placeholder="—" oninput="convertFX('jpy')"></div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Booking tracker</h2>
+      <div class="util-sub">Status across the trip</div>
+
+      <div class="kv-key" style="margin-top:6px;">Confirmed ✅</div>
+      <div class="booking-row"><div class="name">Apostelstube ⭐ at Hotel Elephant<span class="sub">Sun 17 Aug · 19:45 · Bressanone</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">L'Oste Scuro<span class="sub">Mon 18 Aug · 19:30 · Verona</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Viva Vivaldi — Arena di Verona<span class="sub">Tue 19 Aug · 21:15</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Nabucco — Arena di Verona<span class="sub">Wed 20 Aug · 21:00</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Familia Rana ⭐<span class="sub">Thu 21 Aug · lunch · Oppeano</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Dalla Gioconda ⭐<span class="sub">Sat 23 Aug · 20:30 · Gabicce Monte</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Nostrano Pesaro<span class="sub">Sun 24 Aug · 12:30 · Pesaro</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Madonnina del Pescatore ⭐⭐<span class="sub">Sun 24 Aug · 20:45 · Senigallia</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Uliassi ⭐⭐⭐<span class="sub">Mon 25 Aug · 19:45 · Senigallia</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Al Trabucco da Mimì<span class="sub">Thu 28 Aug · 12:30 · Peschici · Ref: B9KJPXMM</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">la Ripa<span class="sub">Thu 28 Aug · 20:15 · Vieste · Ref: BHC4LQKY</span></div><span class="badge confirmed">Confirmed</span></div>
+      <div class="booking-row"><div class="name">Yacht Club Bari (via Pier)<span class="sub">Sat 30 Aug · lunch · Bari</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">Vitantonio Lombardo ⭐ (via Pier)<span class="sub">Sat 30 Aug · 20:00 · Matera</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">Winery agriturismo (via Pier)<span class="sub">Sun 31 Aug · lunch · Basilicata</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">La Lopa (via Pier)<span class="sub">Sun 31 Aug · dinner · Matera</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">Osteria Botteghe Antiche (via Pier)<span class="sub">Mon 1 Sep · lunch · Putignano</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">U Curdunn (via Pier)<span class="sub">Mon 1 Sep · dinner · Matera</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">Osteria del Tempo Perso (via Pier)<span class="sub">Tue 2 Sep · lunch · Ostuni</span></div><span class="badge host">Via Pier</span></div>
+      <div class="booking-row"><div class="name">SAS SK2518 · BRI → CPH<span class="sub">Wed 3 Sep · dep 12:05 · Business</span></div><span class="badge confirmed">Confirmed</span></div>
+
+      <div class="kv-key" style="margin-top:14px;">Still to book / verify ⚠️</div>
+      <div class="booking-row"><div class="name">Antica Osteria del Mirasole<span class="sub">Thu 21 Aug · dinner · verify August opening</span></div><span class="badge priority">Action</span></div>
+      <div class="booking-row"><div class="name">Da Lucio ⭐<span class="sub">Fri 22 Aug · dinner · book at da-lucio.it</span></div><span class="badge priority">Action</span></div>
+      <div class="booking-row"><div class="name">Alla Lanterna<span class="sub">Mon 25 Aug · lunch · Pending</span></div><span class="badge pending">Pending</span></div>
+      <div class="booking-row"><div class="name">Art Hotel Commercianti · Bologna<span class="sub">Thu 21 Aug · 1 night · not yet booked</span></div><span class="badge priority">Action</span></div>
+      <div class="booking-row"><div class="name">Grand Hotel Rimini<span class="sub">Fri 22 Aug · 1 night · not yet booked</span></div><span class="badge priority">Action</span></div>
+      <div class="booking-row"><div class="name">Tue 2 Sep dinner<span class="sub">Pier still arranging fish restaurant · TBC</span></div><span class="badge pending">Pending</span></div>
+      <div class="booking-row"><div class="name">Trains SZG → BRE → VRN<span class="sub">Sun 17 + Mon 18 Aug · not yet booked</span></div><span class="badge priority">Action</span></div>
+
+      <div class="alert" style="margin-top:14px;">
+        <strong>Walk-in restaurants (no reservation needed):</strong>
+        Osteria Caserma Guelfa (Wed 26 Aug) · Da Ferri/Osteria Dentro le Mura (Thu 27 Aug) · All Pier-arranged restaurants (confirmed via personal connection).
+        <br><strong>⚠ Call ahead:</strong> Osteria Dentro le Mura — was previously closed on day of visit.
+      </div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Driving notes</h2>
+      <div class="util-sub">Italy only · ~1,800 km · 13 driving days</div>
+      <div class="kv-list">
+        <div class="kv-item"><span class="kv-key">Car</span><span class="kv-val">Alfa Romeo Junior (Sixt). Unlimited mileage. CDW + theft. Pick-up: Verona Central Station 21 Aug. Drop-off: Bari BRI Airport 3 Sep.</span></div>
+        <div class="kv-item"><span class="kv-key">Autostrada</span><span class="kv-val">The A14 Adriatica is your main artery from Bologna to Bari — runs directly along the Adriatic coast. Pay at barriers by card; keep cash for smaller toll stations.</span></div>
+        <div class="kv-item"><span class="kv-key">Tolls</span><span class="kv-val">Budget €80–120 for the full trip. Most barriers accept Visa/Mastercard contactless. Cash lanes always available as backup.</span></div>
+        <div class="kv-item"><span class="kv-key">Fuel</span><span class="kv-val">~€1.80–2.00 per litre (petrol). Self-service stations open 24h; staffed stations may close 13:00–15:30. Brianza (AGIP/ENI) and Q8 are most common along the A14.</span></div>
+        <div class="kv-item"><span class="kv-key">ZTLs</span><span class="kv-val">Bari, Matera, Ostuni, and Vieste all have limited-traffic zones in their historic centres. Park at the designated car parks outside — always walk in. Cameras fine foreign plates retroactively.</span></div>
+        <div class="kv-item"><span class="kv-key">Gargano</span><span class="kv-val">SS89 and SP52 through the Gargano Peninsula are narrow and winding — beautiful but slow. Allow extra time; no overtaking opportunities. Plan arrivals for daytime.</span></div>
+        <div class="kv-item"><span class="kv-key">Pier days</span><span class="kv-val">Sat 30 Aug and Sun 31 Aug — Pierpaolo Vernole is driving. Park the Alfa in Matera and enjoy two car-free days.</span></div>
+      </div>
+      <div class="tip"><strong>Parking in Matera:</strong> Use the car parks at Piazza Matteotti or the Belvedere area above the Sassi — then walk down into the cave city. Driving inside the Sassi is restricted and unnecessary.</div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Pierpaolo Vernole</h2>
+      <div class="util-sub">Local guide · Bari · contact for all Puglia days</div>
+      <div class="kv-list">
+        <div class="kv-item"><span class="kv-key">Who</span><span class="kv-val">Engineer based in Bari — his firm renovated the Bari cathedral, castle, and other landmark buildings. Passionate about Japanese culture, extensive local network.</span></div>
+        <div class="kv-item"><span class="kv-key">Availability</span><span class="kv-val">With you Sat 30 Aug and Sun 31 Aug (driving). Has personally arranged all Puglia restaurants from 29 Aug onwards. Connected to Vitantonio Lombardo, Botteghe Antiche, La Lopa, U Curdunn, Osteria del Tempo Perso, Yacht Club.</span></div>
+        <div class="kv-item"><span class="kv-key">Email</span><span class="kv-val">pierpa3000@hotmail.com</span></div>
+        <div class="kv-item"><span class="kv-key">WhatsApp</span><span class="kv-val">Via the "Pier in Puglia" group chat</span></div>
+      </div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Dining notes</h2>
+      <div class="util-sub">Adriatic · Puglia · Basilicata</div>
+      <div class="etiq-item"><h4>Brodetto</h4><p>The defining fish stew of the Adriatic — each port town claims its own version. Fanese (Fano): white wine, no tomato. Vastese (Vasto): tomato-rich. Termolese (Termoli): a third variant. Try all three to compare.</p></div>
+      <div class="etiq-item"><h4>Spaghetti all'assassina</h4><p>A Bari speciality — pasta fried directly in a cast-iron pan until charred and caramelised, creating a uniquely smoky bitterness. Only found in Bari. Urban l'assassineria urbana is famous for it; Pier is arranging the Yacht Club version.</p></div>
+      <div class="etiq-item"><h4>Punctuality at tasting-menu restaurants</h4><p>Uliassi, Vitantonio Lombardo, Madonnina del Pescatore and la Ripa all run tasting menus on a single seating. Arrive 10 minutes early — late arrivals disrupt the kitchen's timing for the entire table sequence.</p></div>
+      <div class="etiq-item"><h4>Tipping</h4><p>Service is generally included in southern Italy. Rounding up or leaving €5–10 on a great meal is appreciated, not expected. At starred restaurants, a small cash tip for the sommelier is always noticed.</p></div>
+      <div class="etiq-item"><h4>Coperto</h4><p>Expect a coperto (cover charge) of €3–8 per person on most bills — covers bread and table service. Standard practice, not a tip.</p></div>
+      <div class="etiq-item"><h4>Puglia cooking culture</h4><p>Puglia produces more olive oil than any other Italian region. Extra virgin olive oil is used generously and raw — on bread, over pasta, on fish. The local burrata, stracciatella, and fresh ricotta are non-negotiable. Panzerotti (fried stuffed dough) in Bari is an obsession — Pier will take care of this.</p></div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Travel utilities</h2>
+      <div class="util-sub">Practical information · Italy</div>
+      <div class="kv-list">
+        <div class="kv-item"><span class="kv-key">Power</span><span class="kv-val">Italy: type C, F, L (230V). European two-pin plug works throughout. UK/Japanese plugs need an adapter.</span></div>
+        <div class="kv-item"><span class="kv-key">Time zone</span><span class="kv-val">CEST (UTC+2) throughout — Italy does not change time zones. Japan is UTC+9, so 7 hours ahead.</span></div>
+        <div class="kv-item"><span class="kv-key">eSIM</span><span class="kv-val">Airalo / GigSky / HolaFly regional Italy plans. Italian SIM (TIM/Vodafone IT) at any tabacchi. Data is cheap and coverage is strong on the A14 corridor.</span></div>
+        <div class="kv-item"><span class="kv-key">Cash</span><span class="kv-val">Carry €150–200 for tolls, small restaurants, and markets. Southern Italy is more cash-reliant than the north. ATMs (Bancomat) available in every town.</span></div>
+        <div class="kv-item"><span class="kv-key">Language</span><span class="kv-val">English fluent at all starred restaurants and hotels. In smaller towns (Termoli, Vasto, Peschici) a few Italian words are very helpful — see Emergency tab.</span></div>
+        <div class="kv-item"><span class="kv-key">Heat</span><span class="kv-val">Puglia in late August: 32–36°C daytime, humidity rising from the sea. Start early, rest 13:00–17:00, explore in the evening. Sunscreen essential on the Gargano.</span></div>
+      </div>
+    </div>
+  `;
+  setupFX();
+}
+
+/* ─── Render Emergency ──────────────────────────────────────────────── */
+function renderEmergency() {
+  $('#tab-emergency').innerHTML = `
+
+    <div class="util-card">
+      <h2 class="util-title">Emergency · One tap</h2>
+      <div class="util-sub">112 works everywhere in Italy</div>
+      <div class="emerg-grid">
+        <a class="emerg-call" href="tel:112"><span class="emerg-icon">🆘</span><span class="emerg-num">112</span><span class="emerg-label">EU Emergency</span></a>
+        <a class="emerg-call" href="tel:113"><span class="emerg-icon">🚓</span><span class="emerg-num">113</span><span class="emerg-label">Police (IT)</span></a>
+        <a class="emerg-call" href="tel:118"><span class="emerg-icon">🚑</span><span class="emerg-num">118</span><span class="emerg-label">Ambulance</span></a>
+        <a class="emerg-call" href="tel:115"><span class="emerg-icon">🚒</span><span class="emerg-num">115</span><span class="emerg-label">Fire (IT)</span></a>
+        <a class="emerg-call" href="tel:116117"><span class="emerg-icon">👨‍⚕️</span><span class="emerg-num">116117</span><span class="emerg-label">Medical non-urgent</span></a>
+        <a class="emerg-call" href="tel:1515"><span class="emerg-icon">🌿</span><span class="emerg-num">1515</span><span class="emerg-label">Forest fire</span></a>
+        <a class="emerg-call" href="tel:1530"><span class="emerg-icon">⛵</span><span class="emerg-num">1530</span><span class="emerg-label">Coast guard</span></a>
+        <a class="emerg-call" href="tel:803116"><span class="emerg-icon">🛣️</span><span class="emerg-num">803116</span><span class="emerg-label">ACI breakdown</span></a>
+      </div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Hotel direct lines</h2>
+      <div class="util-sub">All 12 properties</div>
+      <a class="contact-card" href="tel:+390472832750"><div class="contact-name">Hotel Elephant<span class="sub">Sun 17 Aug · Bressanone</span></div><span class="contact-phone">+39 0472 832750</span></a>
+      <a class="contact-card" href="tel:+390459231965"><div class="contact-name">Palazzo Ciopeta<span class="sub">Mon 18–Thu 21 Aug · Verona</span></div><span class="contact-phone">+39 045 923 1965</span></a>
+      <a class="contact-card" href="tel:+390517457511"><div class="contact-name">Art Hotel Commercianti<span class="sub">Thu 21 Aug · Bologna (TBC)</span></div><span class="contact-phone">+39 051 745 7511</span></a>
+      <a class="contact-card" href="tel:+390541560001"><div class="contact-name">Grand Hotel Rimini<span class="sub">Fri 22 Aug · Rimini (TBC)</span></div><span class="contact-phone">+39 0541 56000</span></a>
+      <a class="contact-card" href="tel:+390541962295"><div class="contact-name">Dalla Gioconda<span class="sub">Sat 23 Aug · Gabicce Monte</span></div><span class="contact-phone">+39 0541 962295</span></a>
+      <a class="contact-card" href="tel:+390735581454"><div class="contact-name">Hotel Marconi<span class="sub">Tue 26 Aug · San Benedetto del Tronto</span></div><span class="contact-phone">+39 0735 581454</span></a>
+      <a class="contact-card" href="tel:+390875705703"><div class="contact-name">Residence Sveva<span class="sub">Wed 27 Aug · Termoli</span></div><span class="contact-phone">+39 0875 705703</span></a>
+      <a class="contact-card" href="tel:+393508286423"><div class="contact-name">Tra Cielo e Mare<span class="sub">Thu 28 Aug · Vieste</span></div><span class="contact-phone">+39 350 828 6423</span></a>
+      <a class="contact-card" href="tel:+44 20 3027 6614"><div class="contact-name">Aquatio Cave Luxury Hotel<span class="sub">Fri 29 Aug · Matera</span></div><span class="contact-phone">+44 20 3027 6614</span></a>
+      <a class="contact-card" href="tel:+390835332744"><div class="contact-name">Sextantio Le Grotte della Civita<span class="sub">Sat 30 Aug · Matera</span></div><span class="contact-phone">+39 0835 332744</span></a>
+      <a class="contact-card" href="tel:+390835334358"><div class="contact-name">Palazzo Gattini<span class="sub">Sun 31 Aug–Wed 3 Sep · Matera</span></div><span class="contact-phone">+39 0835 334358</span></a>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Pierpaolo Vernole · Bari</h2>
+      <div class="util-sub">Local expert · contact for all Puglia days</div>
+      <a class="contact-card" href="mailto:pierpa3000@hotmail.com"><div class="contact-name">Pierpaolo Vernole<span class="sub">pierpa3000@hotmail.com</span></div><span class="contact-phone">✉</span></a>
+      <a class="contact-card" href="mailto:p.vernole@outlook.it"><div class="contact-name">Pierpaolo (alternative email)<span class="sub">p.vernole@outlook.it</span></div><span class="contact-phone">✉</span></a>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Hospitals · 24h</h2>
+      <div class="util-sub">Nearest to each base</div>
+      <div class="kv-list">
+        <div class="kv-item"><span class="kv-key">Bressanone</span><span class="kv-val">Ospedale di Bressanone · Via Dante 51 · <a href="tel:+390472813111">+39 0472 813111</a></span></div>
+        <div class="kv-item"><span class="kv-key">Verona</span><span class="kv-val">Ospedale Civile Maggiore · Piazzale Stefani 1 · <a href="tel:+390458121111">+39 045 812 1111</a></span></div>
+        <div class="kv-item"><span class="kv-key">Bologna</span><span class="kv-val">Ospedale Sant'Orsola · Via Pietro Albertoni 15 · <a href="tel:+390512141111">+39 051 214 1111</a></span></div>
+        <div class="kv-item"><span class="kv-key">Senigallia</span><span class="kv-val">Ospedale di Senigallia · Via Cellini 2 · <a href="tel:+390716391">+39 071 6391</a></span></div>
+        <div class="kv-item"><span class="kv-key">Termoli</span><span class="kv-val">Ospedale San Timoteo · Via Martiri della Resistenza · <a href="tel:+390875714111">+39 0875 714111</a></span></div>
+        <div class="kv-item"><span class="kv-key">Foggia / Gargano</span><span class="kv-val">Ospedale Riuniti di Foggia · Viale Luigi Pinto 1 · <a href="tel:+390881731111">+39 0881 731111</a><span class="sub">~1h from Vieste / Peschici</span></span></div>
+        <div class="kv-item"><span class="kv-key">Matera</span><span class="kv-val">Ospedale Madonna delle Grazie · Via Lanera 1 · <a href="tel:+390835243111">+39 0835 243111</a></span></div>
+        <div class="kv-item"><span class="kv-key">Bari</span><span class="kv-val">Policlinico di Bari · Piazza Giulio Cesare 11 · <a href="tel:+390805592111">+39 080 559 2111</a></span></div>
+      </div>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Happy Camper · Concierge</h2>
+      <div class="util-sub">For anything, any time</div>
+      <a class="contact-card" href="tel:+818069892107"><div class="contact-name">Gerhard<span class="sub">Direct line (Japan number)</span></div><span class="contact-phone">+81 80 6989 2107</span></a>
+      <a class="contact-card" href="mailto:hello@happycamper.food"><div class="contact-name">hello@happycamper.food<span class="sub">Email</span></div><span class="contact-phone">✉</span></a>
+    </div>
+
+    <div class="util-card">
+      <h2 class="util-title">Useful Italian phrases</h2>
+      <div class="util-sub">For the road, the table, and emergencies</div>
+      <div class="phrase"><span class="en">Hello / Good day</span><span class="it">Ciao / Buongiorno</span></div>
+      <div class="phrase"><span class="en">Thank you</span><span class="it">Grazie</span></div>
+      <div class="phrase"><span class="en">You're welcome</span><span class="it">Prego</span></div>
+      <div class="phrase"><span class="en">A table for two</span><span class="it">Un tavolo per due</span></div>
+      <div class="phrase"><span class="en">The bill, please</span><span class="it">Il conto, per favore</span></div>
+      <div class="phrase"><span class="en">It was excellent</span><span class="it">Era squisito</span></div>
+      <div class="phrase"><span class="en">Where is the toilet?</span><span class="it">Dov'è il bagno?</span></div>
+      <div class="phrase"><span class="en">I need a doctor</span><span class="it">Ho bisogno di un medico</span></div>
+      <div class="phrase"><span class="en">Call an ambulance</span><span class="it">Chiami un'ambulanza</span></div>
+      <div class="phrase"><span class="en">Help!</span><span class="it">Aiuto!</span></div>
+      <div class="phrase"><span class="en">Where is the hospital?</span><span class="it">Dov'è l'ospedale?</span></div>
+      <div class="phrase"><span class="en">I am lost</span><span class="it">Mi sono perso/a</span></div>
+    </div>
+  `;
+}
+
+/* ─── FX converter ──────────────────────────────────────────────────── */
+function setupFX() {
+  const eur = $('#fx-eur'), gbp = $('#fx-gbp'), jpy = $('#fx-jpy');
+  if (!eur) return;
+  eur.value = 100;
+  convertFX('eur');
+}
+function convertFX(src) {
+  const eur = $('#fx-eur'), gbp = $('#fx-gbp'), jpy = $('#fx-jpy');
+  if (!eur || !gbp || !jpy) return;
+  let e = parseFloat(eur.value), g = parseFloat(gbp.value), j = parseFloat(jpy.value);
+  if (src==='eur' && !isNaN(e)) { gbp.value=(e*FX_GBP_PER_EUR).toFixed(2); jpy.value=Math.round(e*FX_JPY_PER_EUR); }
+  else if (src==='gbp' && !isNaN(g)) { e=g/FX_GBP_PER_EUR; eur.value=e.toFixed(2); jpy.value=Math.round(e*FX_JPY_PER_EUR); }
+  else if (src==='jpy' && !isNaN(j)) { e=j/FX_JPY_PER_EUR; eur.value=e.toFixed(2); gbp.value=(e*FX_GBP_PER_EUR).toFixed(2); }
+}
+
+/* ─── Tabs ──────────────────────────────────────────────────────────── */
+function switchTab(name) {
+  activeTab = name;
+  $$('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab===name));
+  $$('.tab-panel').forEach(p => p.classList.toggle('active', p.id==='tab-'+name));
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ─── Init ──────────────────────────────────────────────────────────── */
+function refreshWeather() {
+  $$('[data-weather]').forEach(el => {
+    const w = weatherCache[el.dataset.key];
+    if (!w) return;
+    const {icon,desc} = wmoToEmoji(w.code);
+    const v = el.querySelector('.val');
+    if (v) v.remove();
+    const s = document.createElement('span');
+    s.className='val';
+    s.innerHTML=`<span>${icon}</span> ${w.min}° / ${w.max}°C · ${desc} · ${w.rain}% rain`;
+    el.appendChild(s);
+  });
+}
+
+(async function init() {
+  renderItinerary();
+  renderUtilities();
+  renderEmergency();
+  updateClock();
+  setInterval(updateClock, 30000);
+  weatherCache = await fetchWeather();
+  refreshWeather();
+})();
+</script>
+</body>
+</html>
